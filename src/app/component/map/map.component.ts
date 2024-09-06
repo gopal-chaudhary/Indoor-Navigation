@@ -18,7 +18,7 @@ export class MapComponent implements AfterViewInit {
     { name: 'Location 2', lat: 51.515, lng: -0.1 },
   ];
   mapsettings:any = {
-    Location: [23.45610, 75.42270],
+    Location: [31.25271960741618, 75.70475680715587],
     zoom: 18
   };
 
@@ -115,7 +115,7 @@ export class MapComponent implements AfterViewInit {
 
     const { name, logo, button, description } = layer.feature.properties.info;
 
-    const logoImg = logo ? `<div class="info-logo"><img src="assets/${logo}"></div>` : "";
+    const logoImg = logo ? `<div class="info-logo"><img src="assets/${logo}"></div>` : " ";
     const descriptionText = description ? `<div class="info-description">${description}</div>` : "";
     const infoButton = button ? `<div class="info-button"><button>${button}</button></div>` : "";
 
