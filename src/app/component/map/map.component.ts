@@ -1,8 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
 import * as L from 'leaflet';
-import { MarkLocations } from './utils/MarkLocationsn';
-import { Coordinate } from '../../interfaces/mapInterface';
 
 @Component({
   selector: 'app-map',
@@ -12,23 +10,19 @@ import { Coordinate } from '../../interfaces/mapInterface';
   standalone: true
 })
 export class MapComponent implements AfterViewInit {
-  constructor() { }
-  private map: any;
+  private map!: L.Map;
   private markerLayer: L.LayerGroup = L.layerGroup();
-  markedLocations:any = [
+  private geojson!: L.GeoJSON;
+  markedLocations = [
     { name: 'Location 1', lat: 51.505, lng: -0.09 },
     { name: 'Location 2', lat: 51.515, lng: -0.1 },
   ];
-  mapsettings:any={
+  mapsettings:any = {
     Location: [23.45610, 75.42270],
-    zoom:18
+    zoom: 18
+  };
 
-
-  }
-
-
-  // sample points for the marker
-  pointsTuples: [number, number][] = [
+  private pointsTuples: [number, number][] = [
     [23.45610, 75.42270],
     [22.72299, 75.864716],
     [22.962187, 76.05011],
@@ -36,59 +30,194 @@ export class MapComponent implements AfterViewInit {
     [22.243344, 76.133881],
   ];
 
-
-
-  private initMap(): void {
-    //--------------INIT MAP------------------
+  private async initMap(): Promise<void> {
     this.map = L.map('map', {
       center: this.mapsettings.Location,
-      zoom: this.mapsettings.zoom,
-
+      zoom: this.mapsettings.zoom
     });
 
-    const tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
       minZoom: 3,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(this.map);
+
+    // Add image overlay
+    const imageUrl = "assets/light-chelm-galeria.svg";
+    const imageBounds: L.LatLngBoundsLiteral = [
+      [51.14725, 23.4427],
+      [51.142, 23.445995],
+    ];
+    L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
+
+    // Fetch and add GeoJSON
+    try {
+      const response = await fetch("assets/data/data.geojson");
+      const data = await response.json();
+
+      this.geojson = L.geoJSON(data, {
+        style: this.style,
+        onEachFeature: this.onEachFeature.bind(this)
+      }).addTo(this.map);
+
+      this.populateShopsList(data);
+    } catch (error) {
+      console.error('Error fetching GeoJSON data:', error);
+    }
+
+    // Initialize search functionality
+    this.initSearchFunctionality();
+  }
+
+  private style(feature: any) {
+    return {
+      fillColor: "#ededed",
+      weight: 2,
+      opacity: 1,
+      color: "white",
+      fillOpacity: 0.7,
+    };
+  }
+
+  private highlightFeature(e: L.LeafletEvent) {
+    const layer:any = e.target as L.Layer;
+    layer.setStyle({
+      weight: 2,
+      color: "black",
+      dashArray: 6,
     });
-    tiles.addTo(this.map);
-    //----------------------------------------------------------
+  }
 
+  private resetHighlight(e: L.LeafletEvent) {
+    this.geojson.resetStyle(e.target);
+  }
 
+  private onEachFeature(feature: any, layer: L.Layer) {
+    layer.on({
+      mouseover: this.highlightFeature.bind(this),
+      mouseout: this.resetHighlight.bind(this),
+      click: this.zoomToFeature.bind(this),
+    });
+  }
 
+  private zoomToFeature(e: L.LeafletEvent) {
+    const layer:any = e.target as L.Layer;
+    const bounds = layer.getBounds();
+    this.map.flyToBounds(bounds, { padding: [50, 50] });
 
-
-
-
-    //-------------------------add markers------------------------------------------
-    // 1.] Convert the tuples to Coordinate objects
-    const points: Coordinate[] = this.pointsTuples.map(([lat, lng]) => ({ lat, lng }));
-    // 2.] Call the function with the map and points
-    MarkLocations(this.map, points);
-
-
-    // --------------------------------------------------------------
-    }
-     //-------------------searchbar code------------------------------
-     searchLocation(query: string): void {
-      // Clear previous markers
-      this.markerLayer.clearLayers();
-
-      const location = this.markedLocations.find((loc:any) => loc.name.toLowerCase() === query.toLowerCase());
-      if (location) {
-        this.map.setView([location.lat, location.lng], 13);
-        L.marker([location.lat, location.lng]).addTo(this.markerLayer)
-          .bindPopup(location.name)
-          .openPopup();
-        this.markerLayer.addTo(this.map);
-      } else {
-        alert('Location not found');
-      }
+    const searchElement = document.getElementById("search-shop");
+    if (searchElement) {
+      (searchElement as HTMLInputElement).value = "";
     }
 
+    this.removeActiveItem();
+    this.setActiveMenuItem(layer.feature.properties.id);
+
+    const { name, logo, button, description } = layer.feature.properties.info;
+
+    const logoImg = logo ? `<div class="info-logo"><img src="assets/${logo}"></div>` : "";
+    const descriptionText = description ? `<div class="info-description">${description}</div>` : "";
+    const infoButton = button ? `<div class="info-button"><button>${button}</button></div>` : "";
+
+    const template = `
+      <div class="info-shop">
+        ${logoImg}
+        <div>
+          <h1 class="info-name">${name}</h1>
+          ${descriptionText}
+          ${infoButton}
+        </div>
+      </div>`;
+
+    layer.bindPopup(template).openPopup();
+  }
 
 
+  private async populateShopsList(data: any) {
+    const shopsList = document.querySelector(".shops-list")!;
+    const sortedFeatures = data.features.sort((a: any, b: any) =>
+      a.properties.category.localeCompare(b.properties.category) ||
+      a.properties.info.name.localeCompare(b.properties.info.name)
+    );
 
+    sortedFeatures.forEach((item: any, index: number, array: any[]) => {
+      const category = item.properties.category !== array[index - 1]?.properties.category
+        ? `<li><h3 class="shop-category">${item.properties.category}</h3></li>`
+        : "";
+
+      const template = `
+        ${category}
+        <li class="shop-item" data-shop-id="${item.properties.id}">
+          <div class="name">${item.properties.info.name}</div>
+          <div class="shop-color" style="background: ${item.properties.color}"></div>
+        </li>
+      `;
+
+      shopsList.insertAdjacentHTML("beforeend", template);
+    });
+
+    this.initShopItemClick();
+  }
+
+  private initShopItemClick() {
+    const shopItems = document.querySelectorAll(".shop-item");
+    shopItems.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        const id = (e.target as any).closest(".shop-item")!.dataset.shopId;
+        this.geojson.eachLayer((layer: any) => {
+          if (layer.feature.properties.id == id) {
+            this.zoomToFeature({ target: layer } as any);
+          }
+        });
+      });
+    });
+  }
+
+  private initSearchFunctionality() {
+    document.addEventListener("DOMContentLoaded", () => {
+      const search = document.getElementById("search-shop")!;
+      search.addEventListener("input", this.searchText.bind(this));
+    });
+  }
+
+  private searchText() {
+    const input = document.getElementById("search-shop") as HTMLInputElement;
+    const filter = input.value.toUpperCase();
+    const lists = document.querySelectorAll(".shops-list > li");
+    const category = document.querySelectorAll(".shop-category");
+
+    lists.forEach((list: any) => {
+      const item = list.textContent || "";
+      list.style.display = item.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+    });
+
+    if (filter.length >= 1) {
+      category.forEach((el) => {
+        (el.parentNode as any).style.display = "none";
+      });
+    }
+  }
+
+  private setActiveMenuItem(id: string) {
+    const lists = document.querySelectorAll(".shops-list > li");
+    lists.forEach((item: any) => {
+      item.classList.remove("active-shop");
+    });
+
+    const item:any = Array.from(lists).find((item: any) => item.dataset.shopId === id);
+    if (item) {
+      item.classList.add("active-shop");
+      const ulElement:any = document.querySelector(".shops-list")!;
+      ulElement.scrollTo(0, item.offsetTop - ulElement.offsetTop);
+    }
+  }
+
+  private removeActiveItem() {
+    const lists = document.querySelectorAll(".shops-list > li");
+    lists.forEach((item: any) => {
+      item.removeAttribute("style");
+    });
+  }
 
   ngAfterViewInit(): void {
     this.initMap();
