@@ -54,14 +54,10 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/leaflet/dist/leaflet.css"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -125,5 +121,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "204827b7-537d-4699-874b-1048c0d0d772"
   }
 }
