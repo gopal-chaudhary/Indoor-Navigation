@@ -13,6 +13,7 @@ export class MapComponent implements AfterViewInit {
   private map!: L.Map;
   private markerLayer: L.LayerGroup = L.layerGroup();
   private geojson!: L.GeoJSON;
+  private locationMarker: L.Marker | undefined;
   markedLocations = [
     { name: 'Location 1', lat: 51.505, lng: -0.09 },
     { name: 'Location 2', lat: 51.515, lng: -0.1 },
@@ -51,52 +52,88 @@ export class MapComponent implements AfterViewInit {
     L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
 
     // Fetch and add GeoJSON
-      try {
-        const response = await fetch("assets/data/data.geojson");
-        const data = await response.json();
+    try {
+      const response = await fetch("assets/data/data.geojson");
+      const data = await response.json();
 
-        // Function to dynamically get style from feature properties
-        const getStyle = (feature:any) => {
-          // Check if feature properties and style are defined
-          if (feature.properties && feature.properties.style && feature.properties.style.fill) {
-            return {
-              fillColor: (feature.properties.style.fill) ? feature.properties.style.fill : 'gray',
-              weight: (feature.properties.style.weight) ? feature.properties.style.weight : 1, // add weight
-              opacity: 1,
-              color: feature.properties.color, // add border color
-              dashArray: '3', // add dash array [doted border]
-              fillOpacity:(feature.properties.style.fillOpacity) ? feature.properties.style.fillOpacity : 1 // add fill opacity
-            };
-          } else {
-            // Default style if feature doesn't have the required properties
-            return {
-              fillColor: '#FFFFFF', // Default fill color
-              weight: 2,
-              opacity: 1,
-              color: 'black',
-              dashArray: '',
-              fillOpacity: 0.7
-            };
-          }
-        };
+      // Function to dynamically get style from feature properties
+      const getStyle = (feature:any) => {
+        if (feature.properties && feature.properties.style && feature.properties.style.fill) {
+          return {
+            fillColor: (feature.properties.style.fill) ? feature.properties.style.fill : 'gray',
+            weight: (feature.properties.style.weight) ? feature.properties.style.weight : 1, // add weight
+            opacity: 1,
+            color: feature.properties.color, // add border color
+            dashArray: '3', // add dash array [doted border]
+            fillOpacity:(feature.properties.style.fillOpacity) ? feature.properties.style.fillOpacity : 1 // add fill opacity
+          };
+        } else {
+          return {
+            fillColor: '#FFFFFF', // Default fill color
+            weight: 2,
+            opacity: 1,
+            color: 'black',
+            dashArray: '',
+            fillOpacity: 0.7
+          };
+        }
+      };
 
-        // Creating GeoJSON layer with dynamic styling
-        this.geojson = L.geoJSON(data, {
-          style: getStyle,
-          onEachFeature: this.onEachFeature.bind(this)
-        }).addTo(this.map);
+      // Creating GeoJSON layer with dynamic styling
+      this.geojson = L.geoJSON(data, {
+        style: getStyle,
+        onEachFeature: this.onEachFeature.bind(this)
+      }).addTo(this.map);
 
-        this.populateShopsList(data);
-      } catch (error) {
-        console.error('Error fetching GeoJSON data:', error);
-      }
-
-
+      this.populateShopsList(data);
+    } catch (error) {
+      console.error('Error fetching GeoJSON data:', error);
+    }
 
     // Initialize search functionality
     this.initSearchFunctionality();
+
+    // Add live location tracking
+    this.initLiveLocation();
   }
 
+  private initLiveLocation() {
+    // Check if Geolocation is supported
+    if (navigator.geolocation) {
+      navigator.geolocation.watchPosition(
+        this.updateLocation.bind(this),
+        this.handleLocationError.bind(this),
+        { enableHighAccuracy: true, maximumAge: 0, timeout: 5000 }
+      );
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  private updateLocation(position: GeolocationPosition) {
+    const { latitude, longitude } = position.coords;
+    const latLng = L.latLng(latitude, longitude);
+
+    // Initialize or update location marker
+    if (!this.locationMarker) {
+      this.locationMarker = L.marker(latLng, {
+        icon: L.icon({
+          iconUrl: '/assets/location-icon.png', // Use your custom icon
+          iconSize: [32, 32]
+        })
+      }).addTo(this.map);
+    } else {
+      this.locationMarker.setLatLng(latLng);
+    }
+
+    // Center map on new location
+    this.map.setView(latLng, this.map.getZoom());
+  }
+
+  private handleLocationError(error: GeolocationPositionError) {
+    console.error('Error obtaining location:', error);
+    // Handle errors (e.g., show a message to the user)
+  }
 
   private highlightFeature(e: L.LeafletEvent) {
     const layer:any = e.target as L.Layer;
@@ -150,7 +187,6 @@ export class MapComponent implements AfterViewInit {
 
     layer.bindPopup(template).openPopup();
   }
-
 
   private async populateShopsList(data: any) {
     const shopsList = document.querySelector(".shops-list")!;
