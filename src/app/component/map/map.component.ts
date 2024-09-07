@@ -51,19 +51,47 @@ export class MapComponent implements AfterViewInit {
     L.imageOverlay(imageUrl, imageBounds).addTo(this.map);
 
     // Fetch and add GeoJSON
-    try {
-      const response = await fetch("assets/data/data.geojson");
-      const data = await response.json();
+      try {
+        const response = await fetch("assets/data/data.geojson");
+        const data = await response.json();
 
-      this.geojson = L.geoJSON(data, {
-        style: this.style,
-        onEachFeature: this.onEachFeature.bind(this)
-      }).addTo(this.map);
+        // Function to dynamically get style from feature properties
+        const getStyle = (feature:any) => {
+          // Check if feature properties and style are defined
+          if (feature.properties && feature.properties.style && feature.properties.style.fill) {
+            return {
+              fillColor: (feature.properties.style.fill) ? feature.properties.style.fill : 'gray',
+              weight: (feature.properties.style.weight) ? feature.properties.style.weight : 1, // add weight
+              opacity: 1,
+              color: feature.properties.color, // add border color
+              dashArray: '3', // add dash array [doted border]
+              fillOpacity:(feature.properties.style.fillOpacity) ? feature.properties.style.fillOpacity : 1 // add fill opacity
+            };
+          } else {
+            // Default style if feature doesn't have the required properties
+            return {
+              fillColor: '#FFFFFF', // Default fill color
+              weight: 2,
+              opacity: 1,
+              color: 'black',
+              dashArray: '',
+              fillOpacity: 0.7
+            };
+          }
+        };
 
-      this.populateShopsList(data);
-    } catch (error) {
-      console.error('Error fetching GeoJSON data:', error);
-    }
+        // Creating GeoJSON layer with dynamic styling
+        this.geojson = L.geoJSON(data, {
+          style: getStyle,
+          onEachFeature: this.onEachFeature.bind(this)
+        }).addTo(this.map);
+
+        this.populateShopsList(data);
+      } catch (error) {
+        console.error('Error fetching GeoJSON data:', error);
+      }
+
+
 
     // Initialize search functionality
     this.initSearchFunctionality();
