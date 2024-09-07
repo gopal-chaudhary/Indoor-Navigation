@@ -97,15 +97,6 @@ export class MapComponent implements AfterViewInit {
     this.initSearchFunctionality();
   }
 
-  private style(feature: any) {
-    return {
-      fillColor: "#ededed",
-      weight: 2,
-      opacity: 1,
-      color: "white",
-      fillOpacity: 0.7,
-    };
-  }
 
   private highlightFeature(e: L.LeafletEvent) {
     const layer:any = e.target as L.Layer;
