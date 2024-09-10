@@ -6,3 +6,49 @@
     left: 0;
     z-index: 0;
 }
+
+#controls {
+    position: absolute;
+    z-index: 3;
+    top: 5rem;
+    left: 5rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 3px solid #1f1f1f;
+    display: flex;
+    align-items: stretch;
+    height: 60px;
+    width: 250px;
+}
+
+.control-button {
+    background-color: #ffefff;
+    color: black;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    // border-right: 3px solid #1f1f1f;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.control-button:hover {
+    background-color: #ffdfdf;
+}
+
+.control-button:active {
+    background-color: #ffcfcf;
+}
+
+.active {
+    background-color: #ffdfdf;
+}
+
+.control-button:not(:last-child) {
+    border-right: 3px solid #1f1f1f;
+}
