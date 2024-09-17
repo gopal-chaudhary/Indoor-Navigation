@@ -7,8 +7,6 @@ import { TileLayer } from '../interfaces/tileLayer.interface';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import * as data from "../../../public/nata.json";
-
 @Injectable({
     providedIn: 'root',
 })
@@ -87,7 +85,7 @@ export class MapService {
 
         L.tileLayer(this.tileLayer.url, this.tileLayer.options).addTo(this.map);
         this.renderLocationMarker();
-        this.renderGeoJson(data, true);
+        // this.renderGeoJson(data, true);
     }
 
     async renderMarker(location: L.LatLng): Promise<void> {
@@ -183,9 +181,14 @@ export class MapService {
     }
 
     renderGeoJson(data: any, isCustom: boolean = false): L.GeoJSON {
-        if (!this.customLayer && isCustom) {
-            this.customLayer = L.geoJSON(null, {
-                pointToLayer: function (feature, latlng) {
+        // Remove existing custom layer if it's being re-rendered
+        if (isCustom) {
+            if (this.customLayer) {
+                this.map.removeLayer(this.customLayer);
+            }
+
+            this.customLayer = L.geoJSON(data, {
+                pointToLayer: (feature, latlng) => {
                     let label = String(feature.properties.name);
                     return L.circleMarker(latlng, {
                         radius: 8,
@@ -196,17 +199,25 @@ export class MapService {
                         fillOpacity: 0.8,
                     }).bindTooltip(label, { permanent: true, opacity: 0.7 }).openTooltip();
                 }
-            });
-            this.customLayer.addData(data);
-            this.customLayer.addTo(this.map);
-        } else if (isCustom) {
-            this.customLayer.addData(data);
-            this.customLayer.addTo(this.map);
+            }).addTo(this.map);
+        } else {
+            // Remove existing route layer if it's being re-rendered
+            if (this.routeLayer) {
+                this.map.removeLayer(this.routeLayer);
+            }
+
+            this.routeLayer = L.geoJSON(data, {
+                style: (feature) => this.getStyles(feature) // Apply styles to each feature
+            }).addTo(this.map);
         }
-        return L.geoJSON(data, { style: this.getStyles(data) }).addTo(this.map);
+
+        return isCustom ? this.customLayer : this.routeLayer;
     }
 
+
+
     private getStyles(feature: any): L.PathOptions {
+        console.log("fp", feature.properties);
         const defaultStyle: L.PathOptions = {
             fillColor: '#FFFFFF',
             weight: 2,
@@ -218,21 +229,17 @@ export class MapService {
 
         if (feature.properties && feature.properties.style) {
             return {
-                fillColor:
-                    feature.properties.style.fill || defaultStyle.fillColor,
+                fillColor: feature.properties.style.fill || defaultStyle.fillColor,
                 weight: feature.properties.style.weight || defaultStyle.weight,
                 color: feature.properties.style.color || defaultStyle.color,
-                fillOpacity:
-                    feature.properties.style.fillOpacity ||
-                    defaultStyle.fillOpacity,
-                dashArray:
-                    feature.properties.style.dashArray ||
-                    defaultStyle.dashArray,
+                fillOpacity: feature.properties.style.fillOpacity || defaultStyle.fillOpacity,
+                dashArray: feature.properties.style.dashArray || defaultStyle.dashArray,
             };
         }
 
         return defaultStyle;
     }
+
 
     async addingListItem(): Promise<{
         geojson: any;
@@ -241,17 +248,20 @@ export class MapService {
     }> {
         let geojson: any;
         let features = [] as any;
+        let data: any;
         try {
             const response = await fetch("../../../assets/data/data1.geojson");
-            const data = await response.json();
+
+            data = await response.json();
+            console.log(data);
 
             geojson = L.geoJSON(data, {
-                style: this.getStyles(data.features),
+                style: (feature) => this.getStyles(feature) // Apply styles to each feature
             }).addTo(this.map);
 
             data.features.forEach((feature: any) => {
                 features.push(feature);
-            })
+            });
 
             return { geojson, features, data };
         } catch (error) {
@@ -260,160 +270,5 @@ export class MapService {
         return { geojson, features, data };
     }
 
-    /*
-    async addingListItem(){
-        try {
-            const response = await fetch("assets/data/data1.geojson");
-            const data = await response.json();
 
-            // Creating GeoJSON layer with dynamic styling
-            this.geojson = L.geoJSON(data, {
-              style: getStyle,
-              onEachFeature: this.onEachFeature.bind(this)
-            }).addTo(this.map);
-
-            this.populateShopsList(data);
-          } catch (error) {
-            console.error('Error fetching GeoJSON data:', error);
-          }
-
-
-
-        // Initialize search functionality
-        this.initSearchFunctionality();
-    }
-
-  private highlightFeature(e: L.LeafletEvent) {
-    const layer:any = e.target as L.Layer;
-    layer.setStyle({
-      weight: 2,
-      color: "black",
-      dashArray: 6,
-    });
-  }
-
-      private resetHighlight(e: L.LeafletEvent) {
-        this.geojson.resetStyle(e.target);
-      }
-      private zoomToFeature(e: L.LeafletEvent) {
-        const layer:any = e.target as L.Layer;
-        const bounds = layer.getBounds();
-        this.map.flyToBounds(bounds, { padding: [50, 50] });
-
-        const searchElement = document.getElementById("search-shop");
-        if (searchElement) {
-          (searchElement as HTMLInputElement).value = "";
-        }
-
-        this.removeActiveItem();
-        this.setActiveMenuItem(layer.feature.properties.id);
-
-        const { name, logo, button, description } = layer.feature.properties.info;
-
-        ///display
-        const logoImg = logo ? `<div class="info-logo"><img src="assets/${logo}"></div>` : " ";
-        const descriptionText = description ? `<div class="info-description">${description}</div>` : "";
-        const infoButton = button ? `<div class="info-button"><button>${button}</button></div>` : "";
-
-        const template = `
-          <div class="info-shop">
-            ${logoImg}
-            <div>
-              <h1 class="info-name">${name}</h1>
-              ${descriptionText}
-              ${infoButton}
-            </div>
-          </div>`;
-
-        layer.bindPopup(template).openPopup();
-      }
-      private removeActiveItem() {
-        const lists = document.querySelectorAll(".shops-list > li");
-        lists.forEach((item: any) => {
-          item.removeAttribute("style");
-        });
-      }
-      private setActiveMenuItem(id: string) {
-        const lists = document.querySelectorAll(".shops-list > li");
-        lists.forEach((item: any) => {
-          item.classList.remove("active-shop");
-        });
-
-        const item:any = Array.from(lists).find((item: any) => item.dataset.shopId === id);
-        if (item) {
-          item.classList.add("active-shop");
-          const ulElement:any = document.querySelector(".shops-list")!;
-          ulElement.scrollTo(0, item.offsetTop - ulElement.offsetTop);
-        }
-      }
-      private initSearchFunctionality() {
-        document.addEventListener("DOMContentLoaded", () => {
-          const search = document.getElementById("search-shop")!;
-          search.addEventListener("input", this.searchText.bind(this));
-        });
-      }
-
-///display
-  private searchText() {
-    const input = document.getElementById("search-shop") as HTMLInputElement;
-    const filter = input.value.toUpperCase();
-    const lists = document.querySelectorAll(".shops-list > li");
-    const category = document.querySelectorAll(".shop-category");
-
-    lists.forEach((list: any) => {
-      const item = list.textContent || "";
-      list.style.display = item.toUpperCase().indexOf(filter) > -1 ? "" : "none";
-    });
-
-    if (filter.length >= 1) {
-      category.forEach((el) => {
-        (el.parentNode as any).style.display = "none";
-      });
-    }
-  }
-
-///display
-  private async populateShopsList(data: any) {
-    const shopsList = document.querySelector(".shops-list")!;
-    const sortedFeatures = data.features.sort((a: any, b: any) =>
-      a.properties.category.localeCompare(b.properties.category) ||
-      a.properties.info.name.localeCompare(b.properties.info.name)
-    );
-
-    sortedFeatures.forEach((item: any, index: number, array: any[]) => {
-      const category = item.properties.category !== array[index - 1]?.properties.category
-        ? `<li><h3 class="shop-category">${item.properties.category}</h3></li>`
-        : "";
-
-      const template = `
-        ${category}
-        <li class="shop-item" data-shop-id="${item.properties.id}">
-          <div class="name">${item.properties.info.name}</div>
-          <div class="shop-color" style="background: ${item.properties.color}"></div>
-        </li>
-      `;
-
-      shopsList.insertAdjacentHTML("beforeend", template);
-    });
-
-    this.initShopItemClick();
-  }
-///display
-  private initShopItemClick() {
-    const shopItems = document.querySelectorAll(".shop-item");
-    shopItems.forEach((item) => {
-      item.addEventListener("click", (e) => {
-        const id = (e.target as any).closest(".shop-item")!.dataset.shopId;
-        this.geojson.eachLayer((layer: any) => {
-          if (layer.feature.properties.id == id) {
-            this.zoomToFeature({ target: layer } as any);
-          }
-        });
-      });
-    });
-  }
-
-
-
-}*/
 }
