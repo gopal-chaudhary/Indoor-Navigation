@@ -9,10 +9,12 @@ export class RoutingEngineService {
     constructor() {}
 
     async getRoute(start: L.LatLng, end: L.LatLng): Promise<any> {
-        const url = `${this.routingEngineUrl}${start.lng},${start.lat};${end.lng},${end.lat}?geometries=geojson`;
+        const url = `${this.routingEngineUrl}${start.lng},${start.lat};${end.lng},${end.lat}?geometries=geojson&steps=true`;
 
         const response = await fetch(url);
         const data = await response.json();
+
+        console.log(data);
 
         if (data && data.routes && data.routes.length > 0) {
             return data.routes[0].geometry;

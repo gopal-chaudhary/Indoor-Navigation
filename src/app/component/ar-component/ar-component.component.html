@@ -4,14 +4,13 @@
         arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
         *ngIf="lat > 0 && lng > 0"
     >
-        <a-box
+        <!-- <a-box
             material="color: yellow;"
             scale="10 10 10"
             [attr.gps-entity-place]="
                 'latitude: 31.2528312; longitude: 75.7039808;'
             "
-        ></a-box>
-
+        ></a-box> -->
         <a-camera
             rotation-reader
             [attr.gps-camera]="

@@ -3,6 +3,8 @@ import { GeoLocationService } from '../../services/geo-location.service';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgIf } from '@angular/common';
 
+import * as data from '../../../../public/nata.json';
+
 declare const AFRAME: any;
 
 @Component({
@@ -32,6 +34,22 @@ export class ArComponentComponent {
 
     async ngOnInit() {
         await this.loadScripts();
+    }
+
+    ngAfterViewInit() {
+        this.spinLock();
+    }
+
+    spinLock() {
+        if(!document.querySelector('a-scene')) {
+            setTimeout(() => {
+                this.spinLock();
+            }, 1000);
+        }
+        else {
+            console.log(document.querySelector('a-scene'));
+            this.loadData();
+        }
     }
 
     async loadScripts() {
@@ -98,6 +116,28 @@ export class ArComponentComponent {
                     simulateLongitude: avgLng,
                 });
             },
+        });
+    }
+
+    loadData() {
+        const testEntity = document.createElement('a-box');
+        testEntity.setAttribute('position', '0 2 -25');
+        testEntity.setAttribute('color', 'blue');
+        testEntity.setAttribute('scale', '10 10 10');
+        document.querySelector('a-scene')?.appendChild(testEntity);
+        data.features.forEach((feature) => {
+            if(feature.geometry.type == "Point") {
+                const entity = document.createElement('a-box');
+                entity.setAttribute('gps-entity-place', `
+                    latitude: ${feature.geometry.coordinates[1]};
+                    longitude: ${feature.geometry.coordinates[0]};
+                `);
+                entity.setAttribute('color', 'red');
+                // entity.setAttribute("name", feature.properties.name as string);
+                entity.setAttribute('scale', '1500 1500 1500');
+                console.log(entity);
+                document.querySelector('a-scene')?.appendChild(entity);
+            }
         });
     }
 }
