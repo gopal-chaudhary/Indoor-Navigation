@@ -7,12 +7,14 @@ import { TileLayer } from '../interfaces/tileLayer.interface';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+import * as data from "../../../public/nata.json";
+
 @Injectable({
     providedIn: 'root',
 })
 export class MapService {
     private defaultMapSettings: MapSettings = {
-        location: [31.25271960741618, 100.70475680715587],
+        location: [31.25118469655742, 75.70537969633557],
         zoom: 19,
     };
 
@@ -21,6 +23,7 @@ export class MapService {
     private userLocation!: L.Marker;
     private destinationMarker!: L.Marker;
     private routeLayer!: L.GeoJSON;
+    private customLayer!: L.GeoJSON;
 
     private tileLayer: TileLayer = {
         url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -53,6 +56,7 @@ export class MapService {
                             position.lat,
                             position.lng,
                         ];
+                        console.log('Using current position:', position);
                         this.saveMapSettings();
                         this.renderLocationMarker();
                     } else {
@@ -83,6 +87,7 @@ export class MapService {
 
         L.tileLayer(this.tileLayer.url, this.tileLayer.options).addTo(this.map);
         this.renderLocationMarker();
+        this.renderGeoJson(data, true);
     }
 
     async renderMarker(location: L.LatLng): Promise<void> {
@@ -139,14 +144,19 @@ export class MapService {
                 this.mapSettings.location,
                 markerOptions
             ).addTo(this.map);
-        } else if (this.mapSettings.location[0] - this.userLocation.getLatLng().lat > 0.0001 || this.mapSettings.location[1] - this.userLocation.getLatLng().lng > 0.0005) {
+        } else if (
+            this.mapSettings.location[0] - this.userLocation.getLatLng().lat >
+                0.0001 ||
+            this.mapSettings.location[1] - this.userLocation.getLatLng().lng >
+                0.0005
+        ) {
             this.userLocation.setLatLng(this.mapSettings.location);
 
             this.map.flyTo(this.mapSettings.location, this.mapSettings.zoom, {
                 animate: true,
                 duration: 1.5,
             });
-            }
+        }
     }
 
     private saveMapSettings(): void {
@@ -158,15 +168,41 @@ export class MapService {
             this.mapSettings.location || this.defaultMapSettings.location;
     }
 
+    renderLayer(data: any): void {
+        if (this.customLayer) {
+            this.map.removeLayer(this.customLayer);
+        }
+        this.customLayer = this.renderGeoJson(data, true);
+    }
+
     renderRoute(data: any): void {
         if (this.routeLayer) {
             this.map.removeLayer(this.routeLayer);
         }
-
         this.routeLayer = this.renderGeoJson(data);
     }
 
-    renderGeoJson(data: any): L.GeoJSON {
+    renderGeoJson(data: any, isCustom: boolean = false): L.GeoJSON {
+        if(!this.customLayer && isCustom) {
+            this.customLayer = L.geoJSON(null, {
+                pointToLayer: function (feature, latlng) {
+                    let label = String(feature.properties.name);
+                    return L.circleMarker(latlng, {
+                        radius: 8,
+                        fillColor: '#000',
+                        color: '#000',
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8,
+                    }).bindTooltip(label, {permanent: true, opacity: 0.7}).openTooltip();
+                }
+            });
+            this.customLayer.addData(data);
+            this.customLayer.addTo(this.map);
+        } else if(isCustom) {
+            this.customLayer.addData(data);
+            this.customLayer.addTo(this.map);
+        }
         return L.geoJSON(data, { style: this.getStyles(data) }).addTo(this.map);
     }
 

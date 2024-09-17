@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class RoutingEngineService {
     private routingEngineUrl: string =
-        'https://router.project-osrm.org/route/v1/foot/';
+        'http://127.0.0.1:5000/route/v1/driving/';
     constructor() {}
 
     async getRoute(start: L.LatLng, end: L.LatLng): Promise<any> {
