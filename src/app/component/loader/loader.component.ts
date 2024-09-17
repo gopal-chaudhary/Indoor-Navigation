@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-railway-loader',
   templateUrl: './loader.component.html',
-  styleUrls: ['./loader.component.css'],
+  styleUrls: ['./loader.component.scss'],
   standalone: true,
   imports: [CommonModule]
 })
