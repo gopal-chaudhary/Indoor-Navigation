@@ -76,7 +76,23 @@ export class MapService {
 
         L.tileLayer(this.tileLayer.url, this.tileLayer.options).addTo(this.map);
         this.renderLocationMarker();
+
+        fetch('./n.geojeson')
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return res.json();
+            })
+            .then(data => {
+                console.log(data);
+                // this.renderGeoJson(data); // Call renderGeoJson with the actual data
+            })
+            .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+            });
     }
+
 
     private renderLocationMarker(): void {
         if (!this.map) {
