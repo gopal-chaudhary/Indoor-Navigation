@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { MapService } from '../../services/map.service';
 import * as L from 'leaflet';
-
 @Component({
     selector: 'app-map',
     templateUrl: './map.component.html',
     styleUrls: ['./map.component.scss'],
     standalone: true,
-    
+
 })
 export class MapComponent {
     private map!: L.Map;
@@ -22,8 +21,6 @@ export class MapComponent {
     constructor(private mapService: MapService) {}
 
     async ngAfterViewInit(): Promise<void> {
-        console.log('MapComponent.ngAfterViewInit()');
-
         try {
             const mapEl: HTMLElement = document.getElementById(
                 'map'
@@ -34,11 +31,12 @@ export class MapComponent {
                     'https://cdn.osmbuildings.org/OSMBuildings-Leaflet.js'
                 );
             });
+
+
         } catch (error) {
             console.error('Error loading OSMBuildings script:', error);
         }
     }
-
     /**
      * Utility function to dynamically load a script
      * @param src URL of the script to load
