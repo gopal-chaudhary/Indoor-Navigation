@@ -2,6 +2,7 @@ import * as L from 'leaflet';
 import { Injectable } from '@angular/core';
 import { GeoLocationService } from './geo-location.service';
 import { MapSettings } from '../interfaces/mapSettings.interface';
+import { RoutingEngineService } from './routing-engine.service';
 import { TileLayer } from '../interfaces/tileLayer.interface';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -18,9 +19,11 @@ export class MapService {
     private mapSettings: MapSettings = { ...this.defaultMapSettings };
     private map!: L.Map;
     private userLocation!: L.Marker;
+    private destinationMarker!: L.Marker;
+    private routeLayer!: L.GeoJSON;
 
     private tileLayer: TileLayer = {
-        url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
         options: {
             maxZoom: 19,
             minZoom: 3,
@@ -28,7 +31,10 @@ export class MapService {
         },
     };
 
-    constructor(private geoLocationService: GeoLocationService) {
+    constructor(
+        private geoLocationService: GeoLocationService,
+        private routingEngineService: RoutingEngineService
+    ) {
         this.initializeMapSettings();
     }
 
@@ -65,6 +71,7 @@ export class MapService {
         if (!this.map) {
             this.renderMap(element);
         }
+
         return of(this.map);
     }
 
@@ -76,6 +83,40 @@ export class MapService {
 
         L.tileLayer(this.tileLayer.url, this.tileLayer.options).addTo(this.map);
         this.renderLocationMarker();
+    }
+
+    async renderMarker(location: L.LatLng): Promise<void> {
+        if (!this.map) {
+            console.warn('Map not initialized');
+            return;
+        }
+
+        const markerOptions: L.MarkerOptions = {
+            title: 'Destination',
+            icon: L.icon({
+                iconUrl: '/assets/images/location-icon.png',
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+            }),
+        };
+
+        if (!this.destinationMarker) {
+            this.destinationMarker = L.marker(location, markerOptions).addTo(
+                this.map
+            );
+        } else {
+            this.destinationMarker.setLatLng(location);
+        }
+
+        try {
+            const routeGeoJson = await this.routingEngineService.getRoute(
+                this.userLocation.getLatLng(),
+                location
+            );
+            this.renderRoute(routeGeoJson);
+        } catch (error) {
+            console.error('Error getting route:', error);
+        }
     }
 
     private renderLocationMarker(): void {
@@ -98,14 +139,14 @@ export class MapService {
                 this.mapSettings.location,
                 markerOptions
             ).addTo(this.map);
-        } else {
+        } else if (this.mapSettings.location[0] - this.userLocation.getLatLng().lat > 0.0001 || this.mapSettings.location[1] - this.userLocation.getLatLng().lng > 0.0005) {
             this.userLocation.setLatLng(this.mapSettings.location);
-        }
 
-        this.map.flyTo(this.mapSettings.location, this.mapSettings.zoom, {
-            animate: true,
-            duration: 1.5,
-        });
+            this.map.flyTo(this.mapSettings.location, this.mapSettings.zoom, {
+                animate: true,
+                duration: 1.5,
+            });
+            }
     }
 
     private saveMapSettings(): void {
@@ -117,8 +158,16 @@ export class MapService {
             this.mapSettings.location || this.defaultMapSettings.location;
     }
 
-    renderGeoJson(data: any): void {
-        L.geoJSON(data, { style: this.getStyles(data) }).addTo(this.map);
+    renderRoute(data: any): void {
+        if (this.routeLayer) {
+            this.map.removeLayer(this.routeLayer);
+        }
+
+        this.routeLayer = this.renderGeoJson(data);
+    }
+
+    renderGeoJson(data: any): L.GeoJSON {
+        return L.geoJSON(data, { style: this.getStyles(data) }).addTo(this.map);
     }
 
     private getStyles(feature: any): L.PathOptions {

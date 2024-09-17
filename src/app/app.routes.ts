@@ -4,5 +4,5 @@ import { ArComponentComponent } from './component/ar-component/ar-component.comp
 
 export const routes: Routes = [
     { path: '', component: MapComponent},
-    { path: 'edit', component: ArComponentComponent },
+    { path: 'ar', component: ArComponentComponent },
 ];

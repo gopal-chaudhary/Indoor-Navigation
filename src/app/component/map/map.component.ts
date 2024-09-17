@@ -38,6 +38,11 @@ export class MapComponent {
         }
     }
 
+    async renderMarker(event: MouseEvent): Promise<void> {
+        const latlng = this.map.mouseEventToLatLng(event);
+        await this.mapService.renderMarker(latlng);
+    }
+
     /**
      * Utility function to dynamically load a script
      * @param src URL of the script to load
