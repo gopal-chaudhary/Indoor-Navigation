@@ -1,1771 +1,1869 @@
 {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 1,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "Bytom",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 125,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 25",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.70225,
+                            31.252708
+                        ],
+                        [
+                            75.70226,
+                            31.252937
+                        ],
+                        [
+                            75.702561,
+                            31.252928
+                        ],
+                        [
+                            75.70255,
+                            31.252772
+                        ],
+                        [
+                            75.702609,
+                            31.252772
+                        ],
+                        [
+                            75.702615,
+                            31.252607
+                        ],
+                        [
+                            75.70255,
+                            31.252616
+                        ],
+                        [
+                            75.70255,
+                            31.252474
+                        ],
+                        [
+                            75.70225,
+                            31.252708
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.44366, 51.145244],
-            [23.443534, 51.145219],
-            [23.443575, 51.145132],
-            [23.443617, 51.145139],
-            [23.443603, 51.145168],
-            [23.443691, 51.145183],
-            [23.44366, 51.145244]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 2,
-        "category": "biżuteria",
-        "info": {
-          "name": "W.Kruk",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 126,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 26",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.702603,
+                            31.252776
+                        ],
+                        [
+                            75.702667,
+                            31.252754
+                        ],
+                        [
+                            75.702673,
+                            31.252932
+                        ],
+                        [
+                            75.703005,
+                            31.252928
+                        ],
+                        [
+                            75.703,
+                            31.252754
+                        ],
+                        [
+                            75.703059,
+                            31.252754
+                        ],
+                        [
+                            75.703054,
+                            31.252593
+                        ],
+                        [
+                            75.702973,
+                            31.252602
+                        ],
+                        [
+                            75.702968,
+                            31.25246
+                        ],
+                        [
+                            75.702683,
+                            31.25246
+                        ],
+                        [
+                            75.702689,
+                            31.252607
+                        ],
+                        [
+                            75.702608,
+                            31.252611
+                        ],
+                        [
+                            75.702603,
+                            31.252776
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#CEA24A",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#CEA24Ai"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443527, 51.145218],
-            [23.443554, 51.145161],
-            [23.443451, 51.145141],
-            [23.443431, 51.14518],
-            [23.443443, 51.145189],
-            [23.443459, 51.145197],
-            [23.443473, 51.145202],
-            [23.443487, 51.145207],
-            [23.443506, 51.145213],
-            [23.443527, 51.145218]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 3,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "Vistula",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 127,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 27",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.703064,
+                            31.252749
+                        ],
+                        [
+                            75.703118,
+                            31.252735
+                        ],
+                        [
+                            75.703107,
+                            31.252928
+                        ],
+                        [
+                            75.703429,
+                            31.252923
+                        ],
+                        [
+                            75.703424,
+                            31.252735
+                        ],
+                        [
+                            75.703477,
+                            31.25274
+                        ],
+                        [
+                            75.703477,
+                            31.252588
+                        ],
+                        [
+                            75.703397,
+                            31.252597
+                        ],
+                        [
+                            75.703408,
+                            31.252455
+                        ],
+                        [
+                            75.703118,
+                            31.252455
+                        ],
+                        [
+                            75.703118,
+                            31.252602
+                        ],
+                        [
+                            75.703054,
+                            31.252597
+                        ],
+                        [
+                            75.703064,
+                            31.252749
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443557, 51.145157],
-            [23.443453, 51.145137],
-            [23.443494, 51.145052],
-            [23.443622, 51.145076],
-            [23.443595, 51.14513],
-            [23.443571, 51.145126],
-            [23.443557, 51.145157]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 4,
-        "category": "sport i rekreacja",
-        "info": {
-          "name": "SIZEER",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 128,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 28",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.703483,
+                            31.25274
+                        ],
+                        [
+                            75.703477,
+                            31.252597
+                        ],
+                        [
+                            75.703542,
+                            31.252597
+                        ],
+                        [
+                            75.703542,
+                            31.252451
+                        ],
+                        [
+                            75.703815,
+                            31.252442
+                        ],
+                        [
+                            75.703821,
+                            31.252579
+                        ],
+                        [
+                            75.703944,
+                            31.252579
+                        ],
+                        [
+                            75.703939,
+                            31.25274
+                        ],
+                        [
+                            75.703837,
+                            31.252744
+                        ],
+                        [
+                            75.703832,
+                            31.252909
+                        ],
+                        [
+                            75.703515,
+                            31.252923
+                        ],
+                        [
+                            75.703536,
+                            31.252735
+                        ],
+                        [
+                            75.703483,
+                            31.25274
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#28A747",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#28A747"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443497, 51.145047],
-            [23.443524, 51.144993],
-            [23.443715, 51.145029],
-            [23.443648, 51.145169],
-            [23.443612, 51.145164],
-            [23.443626, 51.145136],
-            [23.443603, 51.145133],
-            [23.443632, 51.145072],
-            [23.443497, 51.145047]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 5,
-        "category": "zdrowie i uroda",
-        "info": {
-          "name": "DOUGLAS",
-          "logo": "./logs/Douglas.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 129,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 29",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.70395,
+                            31.252909
+                        ],
+                        [
+                            75.703939,
+                            31.252749
+                        ],
+                        [
+                            75.703944,
+                            31.252588
+                        ],
+                        [
+                            75.703939,
+                            31.252432
+                        ],
+                        [
+                            75.704121,
+                            31.252432
+                        ],
+                        [
+                            75.704363,
+                            31.252909
+                        ],
+                        [
+                            75.70395,
+                            31.252909
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#28BBED",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#28BBED"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443524, 51.144988],
-            [23.443559, 51.144917],
-            [23.443837, 51.144968],
-            [23.443821, 51.145002],
-            [23.443904, 51.145018],
-            [23.443886, 51.145056],
-            [23.443524, 51.144988]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 6,
-        "category": "księgarnia",
-        "info": {
-          "name": "Świat Książki",
-          "logo": "./logs/swiat-ksiazki.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 130,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 30",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.704275,
+                            31.252437
+                        ],
+                        [
+                            75.704506,
+                            31.252896
+                        ],
+                        [
+                            75.704742,
+                            31.252896
+                        ],
+                        [
+                            75.704736,
+                            31.252437
+                        ],
+                        [
+                            75.704275,
+                            31.252437
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#E62055",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#E62055"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443573, 51.14489],
-            [23.443614, 51.144798],
-            [23.443764, 51.144825],
-            [23.443884, 51.144784],
-            [23.443978, 51.144893],
-            [23.443961, 51.144898],
-            [23.443932, 51.144957],
-            [23.443573, 51.14489]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 7,
-        "category": "usługi",
-        "info": {
-          "name": "KOLPORTER",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 131,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 31",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.704736,
+                            31.252891
+                        ],
+                        [
+                            75.704817,
+                            31.252891
+                        ],
+                        [
+                            75.704828,
+                            31.252845
+                        ],
+                        [
+                            75.704935,
+                            31.252845
+                        ],
+                        [
+                            75.70494,
+                            31.252896
+                        ],
+                        [
+                            75.704994,
+                            31.252891
+                        ],
+                        [
+                            75.704999,
+                            31.252547
+                        ],
+                        [
+                            75.704731,
+                            31.252547
+                        ],
+                        [
+                            75.704736,
+                            31.252891
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443618, 51.144793],
-            [23.443627, 51.144771],
-            [23.443675, 51.144755],
-            [23.443712, 51.144798],
-            [23.443706, 51.144811],
-            [23.443618, 51.144793]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 8,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "ESOTIQ",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 132,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 32",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.704736,
+                            31.252557
+                        ],
+                        [
+                            75.704731,
+                            31.252442
+                        ],
+                        [
+                            75.70464,
+                            31.252442
+                        ],
+                        [
+                            75.704645,
+                            31.252346
+                        ],
+                        [
+                            75.70442,
+                            31.25235
+                        ],
+                        [
+                            75.704409,
+                            31.252107
+                        ],
+                        [
+                            75.704602,
+                            31.252107
+                        ],
+                        [
+                            75.704779,
+                            31.252094
+                        ],
+                        [
+                            75.704983,
+                            31.252094
+                        ],
+                        [
+                            75.704994,
+                            31.252547
+                        ],
+                        [
+                            75.704736,
+                            31.252557
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443712, 51.144812],
-            [23.443718, 51.144796],
-            [23.443681, 51.144753],
-            [23.443748, 51.14473],
-            [23.443812, 51.144805],
-            [23.443764, 51.144821],
-            [23.443712, 51.144812]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 9,
-        "category": "usługi",
-        "info": {
-          "name": "TUI",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 133,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 33",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.704597,
+                            31.252107
+                        ],
+                        [
+                            75.704597,
+                            31.251988
+                        ],
+                        [
+                            75.704425,
+                            31.251993
+                        ],
+                        [
+                            75.704425,
+                            31.25175
+                        ],
+                        [
+                            75.704967,
+                            31.251754
+                        ],
+                        [
+                            75.704967,
+                            31.251974
+                        ],
+                        [
+                            75.704779,
+                            31.251983
+                        ],
+                        [
+                            75.704779,
+                            31.252093
+                        ],
+                        [
+                            75.704597,
+                            31.252107
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443754, 51.144728],
-            [23.443818, 51.144706],
-            [23.443882, 51.144781],
-            [23.443818, 51.144803],
-            [23.443754, 51.144728]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 10,
-        "category": "sport i rekreacja",
-        "info": {
-          "name": "4F",
-          "logo": "./logs/4f.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 134,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 34",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.704597,
+                            31.251754
+                        ],
+                        [
+                            75.704597,
+                            31.251672
+                        ],
+                        [
+                            75.70442,
+                            31.251672
+                        ],
+                        [
+                            75.704404,
+                            31.251438
+                        ],
+                        [
+                            75.704602,
+                            31.251433
+                        ],
+                        [
+                            75.704608,
+                            31.2513
+                        ],
+                        [
+                            75.704828,
+                            31.251296
+                        ],
+                        [
+                            75.704828,
+                            31.251429
+                        ],
+                        [
+                            75.704951,
+                            31.251429
+                        ],
+                        [
+                            75.704951,
+                            31.251658
+                        ],
+                        [
+                            75.704763,
+                            31.251663
+                        ],
+                        [
+                            75.704769,
+                            31.251754
+                        ],
+                        [
+                            75.704597,
+                            31.251754
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#28A747",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#28A747"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443825, 51.144704],
-            [23.443971, 51.144655],
-            [23.444131, 51.14484],
-            [23.443985, 51.14489],
-            [23.443825, 51.144704]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 11,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "Diverse",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 135,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 35",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.704286,
+                            31.252268
+                        ],
+                        [
+                            75.704243,
+                            31.251919
+                        ],
+                        [
+                            75.704157,
+                            31.251919
+                        ],
+                        [
+                            75.704087,
+                            31.251928
+                        ],
+                        [
+                            75.704023,
+                            31.251947
+                        ],
+                        [
+                            75.703959,
+                            31.25197
+                        ],
+                        [
+                            75.703894,
+                            31.251997
+                        ],
+                        [
+                            75.703835,
+                            31.252043
+                        ],
+                        [
+                            75.703782,
+                            31.252094
+                        ],
+                        [
+                            75.703749,
+                            31.252149
+                        ],
+                        [
+                            75.703717,
+                            31.252204
+                        ],
+                        [
+                            75.703696,
+                            31.252254
+                        ],
+                        [
+                            75.703685,
+                            31.252304
+                        ],
+                        [
+                            75.704286,
+                            31.252268
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444138, 51.144838],
-            [23.443978, 51.144652],
-            [23.444089, 51.144615],
-            [23.444248, 51.144801],
-            [23.444138, 51.144838]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 12,
-        "category": "biżuteria",
-        "info": {
-          "name": "Apart",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 136,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 36",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.704243,
+                            31.251342
+                        ],
+                        [
+                            75.704237,
+                            31.251915
+                        ],
+                        [
+                            75.704173,
+                            31.251924
+                        ],
+                        [
+                            75.704109,
+                            31.251928
+                        ],
+                        [
+                            75.70405,
+                            31.251947
+                        ],
+                        [
+                            75.703991,
+                            31.251961
+                        ],
+                        [
+                            75.703819,
+                            31.251576
+                        ],
+                        [
+                            75.704243,
+                            31.251342
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#CEA24A",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#CEA24A"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444179, 51.14467],
-            [23.444122, 51.144604],
-            [23.444195, 51.14458],
-            [23.444212, 51.144599],
-            [23.444277, 51.144577],
-            [23.444317, 51.144623],
-            [23.444179, 51.14467]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 13,
-        "category": "usługi",
-        "info": {
-          "name": "Godan",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 137,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 37",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.703921,
+                            31.251814
+                        ],
+                        [
+                            75.703985,
+                            31.251965
+                        ],
+                        [
+                            75.703921,
+                            31.251984
+                        ],
+                        [
+                            75.703862,
+                            31.252025
+                        ],
+                        [
+                            75.703803,
+                            31.252071
+                        ],
+                        [
+                            75.70376,
+                            31.252126
+                        ],
+                        [
+                            75.703621,
+                            31.252048
+                        ],
+                        [
+                            75.703208,
+                            31.251901
+                        ],
+                        [
+                            75.703701,
+                            31.25164
+                        ],
+                        [
+                            75.703803,
+                            31.25186
+                        ],
+                        [
+                            75.703921,
+                            31.251814
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444209, 51.144705],
-            [23.444182, 51.144674],
-            [23.44432, 51.144628],
-            [23.444361, 51.144675],
-            [23.444296, 51.144696],
-            [23.444281, 51.14468],
-            [23.444209, 51.144705]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 14,
-        "category": "usługi",
-        "info": {
-          "name": "Luppo Puppo",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 138,
+                "category": "ACADEMIC",
+                "info": {
+                    "name": "Block 38",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.702629,
+                            31.252309
+                        ],
+                        [
+                            75.703685,
+                            31.252304
+                        ],
+                        [
+                            75.703696,
+                            31.252259
+                        ],
+                        [
+                            75.703706,
+                            31.252213
+                        ],
+                        [
+                            75.703733,
+                            31.252167
+                        ],
+                        [
+                            75.703749,
+                            31.252121
+                        ],
+                        [
+                            75.70361,
+                            31.252057
+                        ],
+                        [
+                            75.703551,
+                            31.252144
+                        ],
+                        [
+                            75.703111,
+                            31.251993
+                        ],
+                        [
+                            75.702629,
+                            31.252309
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444212, 51.144709],
-            [23.444278, 51.144687],
-            [23.444293, 51.144703],
-            [23.444365, 51.144679],
-            [23.444439, 51.144765],
-            [23.4443, 51.144812],
-            [23.444212, 51.144709]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 15,
-        "category": "gastronomia",
-        "info": {
-          "name": "Grycan",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 211,
+                "category": "Hostel",
+                "info": {
+                    "name": "BH-1",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#c5e800",
+                "style": {
+                    "fillOpacity": 0.6,
+                    "weight": 2,
+                    "fill": "#c5e800"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.699589,
+                            31.250983
+                        ],
+                        [
+                            75.699787,
+                            31.250988
+                        ],
+                        [
+                            75.699771,
+                            31.251456
+                        ],
+                        [
+                            75.699905,
+                            31.251465
+                        ],
+                        [
+                            75.699927,
+                            31.250988
+                        ],
+                        [
+                            75.700131,
+                            31.250992
+                        ],
+                        [
+                            75.700115,
+                            31.251456
+                        ],
+                        [
+                            75.700233,
+                            31.251456
+                        ],
+                        [
+                            75.700244,
+                            31.250992
+                        ],
+                        [
+                            75.700474,
+                            31.250997
+                        ],
+                        [
+                            75.700448,
+                            31.251575
+                        ],
+                        [
+                            75.700227,
+                            31.251575
+                        ],
+                        [
+                            75.700238,
+                            31.251511
+                        ],
+                        [
+                            75.700104,
+                            31.251511
+                        ],
+                        [
+                            75.700104,
+                            31.251635
+                        ],
+                        [
+                            75.699911,
+                            31.25163
+                        ],
+                        [
+                            75.699916,
+                            31.251524
+                        ],
+                        [
+                            75.699771,
+                            31.251515
+                        ],
+                        [
+                            75.699771,
+                            31.25157
+                        ],
+                        [
+                            75.699573,
+                            31.251552
+                        ],
+                        [
+                            75.699589,
+                            31.250983
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#EE7260",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#EE7260"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444343, 51.14456],
-            [23.444319, 51.144532],
-            [23.444393, 51.144508],
-            [23.444416, 51.144535],
-            [23.444343, 51.14456]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 16,
-        "category": "biżuteria",
-        "info": {
-          "name": "Briju",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 212,
+                "category": "Hostel",
+                "info": {
+                    "name": "BH-2",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#c5e800",
+                "style": {
+                    "fillOpacity": 0.6,
+                    "weight": 2,
+                    "fill": "#c5e800"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.701091,
+                            31.249543
+                        ],
+                        [
+                            75.701161,
+                            31.249543
+                        ],
+                        [
+                            75.701156,
+                            31.249699
+                        ],
+                        [
+                            75.701075,
+                            31.24969
+                        ],
+                        [
+                            75.701059,
+                            31.249933
+                        ],
+                        [
+                            75.70086,
+                            31.249933
+                        ],
+                        [
+                            75.70086,
+                            31.249727
+                        ],
+                        [
+                            75.700742,
+                            31.249727
+                        ],
+                        [
+                            75.700732,
+                            31.249938
+                        ],
+                        [
+                            75.700517,
+                            31.249928
+                        ],
+                        [
+                            75.700533,
+                            31.249465
+                        ],
+                        [
+                            75.700748,
+                            31.249474
+                        ],
+                        [
+                            75.700732,
+                            31.249676
+                        ],
+                        [
+                            75.700877,
+                            31.249681
+                        ],
+                        [
+                            75.700877,
+                            31.249479
+                        ],
+                        [
+                            75.701091,
+                            31.24947
+                        ],
+                        [
+                            75.701091,
+                            31.249543
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#CEA24A",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#CEA24A"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444508, 51.144559],
-            [23.444468, 51.144512],
-            [23.444536, 51.144489],
-            [23.444519, 51.14447],
-            [23.444592, 51.144445],
-            [23.444649, 51.144512],
-            [23.444508, 51.144559]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 17,
-        "category": "gastronomia",
-        "info": {
-          "name": "City Kebab",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 213,
+                "category": "Hostel",
+                "info": {
+                    "name": "BH-3",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#c5e800",
+                "style": {
+                    "fillOpacity": 0.6,
+                    "weight": 2,
+                    "fill": "#c5e800"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.700516,
+                            31.249718
+                        ],
+                        [
+                            75.700409,
+                            31.249718
+                        ],
+                        [
+                            75.700398,
+                            31.249924
+                        ],
+                        [
+                            75.700189,
+                            31.249915
+                        ],
+                        [
+                            75.700194,
+                            31.249704
+                        ],
+                        [
+                            75.700065,
+                            31.249704
+                        ],
+                        [
+                            75.700049,
+                            31.249915
+                        ],
+                        [
+                            75.699861,
+                            31.249915
+                        ],
+                        [
+                            75.699861,
+                            31.249704
+                        ],
+                        [
+                            75.699261,
+                            31.249695
+                        ],
+                        [
+                            75.699271,
+                            31.249649
+                        ],
+                        [
+                            75.699175,
+                            31.249653
+                        ],
+                        [
+                            75.699185,
+                            31.249328
+                        ],
+                        [
+                            75.699395,
+                            31.249332
+                        ],
+                        [
+                            75.699379,
+                            31.249658
+                        ],
+                        [
+                            75.699529,
+                            31.249663
+                        ],
+                        [
+                            75.699534,
+                            31.249447
+                        ],
+                        [
+                            75.699727,
+                            31.249442
+                        ],
+                        [
+                            75.699722,
+                            31.249667
+                        ],
+                        [
+                            75.699862,
+                            31.249649
+                        ],
+                        [
+                            75.699856,
+                            31.249438
+                        ],
+                        [
+                            75.700066,
+                            31.249452
+                        ],
+                        [
+                            75.700055,
+                            31.249649
+                        ],
+                        [
+                            75.700194,
+                            31.249658
+                        ],
+                        [
+                            75.700205,
+                            31.249465
+                        ],
+                        [
+                            75.700398,
+                            31.249465
+                        ],
+                        [
+                            75.700404,
+                            31.249667
+                        ],
+                        [
+                            75.700516,
+                            31.249718
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#EE7260",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#EE7260"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444553, 51.144611],
-            [23.444512, 51.144563],
-            [23.444652, 51.144516],
-            [23.444693, 51.144563],
-            [23.444553, 51.144611]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 18,
-        "category": "gastronomia",
-        "info": {
-          "name": "Olimp",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 214,
+                "category": "Hostel",
+                "info": {
+                    "name": "BH-4",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#c5e800",
+                "style": {
+                    "fillOpacity": 0.6,
+                    "weight": 2,
+                    "fill": "#c5e800"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.700265,
+                            31.248589
+                        ],
+                        [
+                            75.700217,
+                            31.24892
+                        ],
+                        [
+                            75.699986,
+                            31.248901
+                        ],
+                        [
+                            75.700002,
+                            31.248755
+                        ],
+                        [
+                            75.699894,
+                            31.248736
+                        ],
+                        [
+                            75.699873,
+                            31.248869
+                        ],
+                        [
+                            75.699674,
+                            31.248855
+                        ],
+                        [
+                            75.699669,
+                            31.248787
+                        ],
+                        [
+                            75.699546,
+                            31.248773
+                        ],
+                        [
+                            75.69954,
+                            31.248846
+                        ],
+                        [
+                            75.699374,
+                            31.248828
+                        ],
+                        [
+                            75.699385,
+                            31.248764
+                        ],
+                        [
+                            75.699272,
+                            31.248755
+                        ],
+                        [
+                            75.699261,
+                            31.248814
+                        ],
+                        [
+                            75.699041,
+                            31.248791
+                        ],
+                        [
+                            75.699057,
+                            31.248654
+                        ],
+                        [
+                            75.698923,
+                            31.248635
+                        ],
+                        [
+                            75.698902,
+                            31.248782
+                        ],
+                        [
+                            75.698708,
+                            31.248764
+                        ],
+                        [
+                            75.69874,
+                            31.248447
+                        ],
+                        [
+                            75.69895,
+                            31.24847
+                        ],
+                        [
+                            75.698939,
+                            31.24858
+                        ],
+                        [
+                            75.699073,
+                            31.248608
+                        ],
+                        [
+                            75.699084,
+                            31.248493
+                        ],
+                        [
+                            75.699293,
+                            31.248507
+                        ],
+                        [
+                            75.699272,
+                            31.248695
+                        ],
+                        [
+                            75.699417,
+                            31.248709
+                        ],
+                        [
+                            75.699428,
+                            31.248521
+                        ],
+                        [
+                            75.699556,
+                            31.248544
+                        ],
+                        [
+                            75.69953,
+                            31.248718
+                        ],
+                        [
+                            75.699685,
+                            31.248727
+                        ],
+                        [
+                            75.699701,
+                            31.248553
+                        ],
+                        [
+                            75.699911,
+                            31.24858
+                        ],
+                        [
+                            75.699889,
+                            31.248681
+                        ],
+                        [
+                            75.700018,
+                            31.248704
+                        ],
+                        [
+                            75.700034,
+                            31.248566
+                        ],
+                        [
+                            75.700265,
+                            31.248589
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#EE7260",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#EE7260"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444556, 51.144614],
-            [23.444696, 51.144567],
-            [23.444771, 51.144654],
-            [23.444631, 51.144701],
-            [23.444556, 51.144614]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 19,
-        "category": "zdrowie i uroda",
-        "info": {
-          "name": "Ziaja",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 215,
+                "category": "Hostel",
+                "info": {
+                    "name": "BH-5",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#c5e800",
+                "style": {
+                    "fillOpacity": 0.6,
+                    "weight": 2,
+                    "fill": "#c5e800"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.703129,
+                            31.248952
+                        ],
+                        [
+                            75.70321,
+                            31.248993
+                        ],
+                        [
+                            75.703366,
+                            31.248993
+                        ],
+                        [
+                            75.703382,
+                            31.24853
+                        ],
+                        [
+                            75.7035,
+                            31.248525
+                        ],
+                        [
+                            75.703489,
+                            31.248993
+                        ],
+                        [
+                            75.703704,
+                            31.248993
+                        ],
+                        [
+                            75.703709,
+                            31.248534
+                        ],
+                        [
+                            75.703838,
+                            31.248534
+                        ],
+                        [
+                            75.703822,
+                            31.249002
+                        ],
+                        [
+                            75.704026,
+                            31.249011
+                        ],
+                        [
+                            75.704037,
+                            31.248438
+                        ],
+                        [
+                            75.703838,
+                            31.248433
+                        ],
+                        [
+                            75.703715,
+                            31.248488
+                        ],
+                        [
+                            75.703715,
+                            31.248282
+                        ],
+                        [
+                            75.703511,
+                            31.248282
+                        ],
+                        [
+                            75.703505,
+                            31.248479
+                        ],
+                        [
+                            75.703382,
+                            31.248484
+                        ],
+                        [
+                            75.703387,
+                            31.248406
+                        ],
+                        [
+                            75.703296,
+                            31.248415
+                        ],
+                        [
+                            75.703178,
+                            31.248388
+                        ],
+                        [
+                            75.703146,
+                            31.248447
+                        ],
+                        [
+                            75.703199,
+                            31.248484
+                        ],
+                        [
+                            75.703135,
+                            31.24853
+                        ],
+                        [
+                            75.703194,
+                            31.248566
+                        ],
+                        [
+                            75.703146,
+                            31.248621
+                        ],
+                        [
+                            75.70321,
+                            31.248644
+                        ],
+                        [
+                            75.703151,
+                            31.248704
+                        ],
+                        [
+                            75.703135,
+                            31.248787
+                        ],
+                        [
+                            75.703178,
+                            31.248842
+                        ],
+                        [
+                            75.703108,
+                            31.248883
+                        ],
+                        [
+                            75.703172,
+                            31.248901
+                        ],
+                        [
+                            75.703129,
+                            31.248952
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#28BBED",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#28BBED"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444629, 51.144432],
-            [23.444676, 51.144417],
-            [23.444834, 51.144601],
-            [23.444788, 51.144617],
-            [23.444629, 51.144432]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 20,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "Big Star",
-          "logo": "./logs/big-star.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 216,
+                "category": "Hostel",
+                "info": {
+                    "name": "BH-6",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#c5e800",
+                "style": {
+                    "fillOpacity": 0.6,
+                    "weight": 2,
+                    "fill": "#c5e800"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.703715,
+                            31.248278
+                        ],
+                        [
+                            75.703511,
+                            31.248282
+                        ],
+                        [
+                            75.703521,
+                            31.248108
+                        ],
+                        [
+                            75.703398,
+                            31.248099
+                        ],
+                        [
+                            75.703398,
+                            31.248167
+                        ],
+                        [
+                            75.703323,
+                            31.248163
+                        ],
+                        [
+                            75.703258,
+                            31.248181
+                        ],
+                        [
+                            75.703162,
+                            31.24814
+                        ],
+                        [
+                            75.703199,
+                            31.248076
+                        ],
+                        [
+                            75.703135,
+                            31.248048
+                        ],
+                        [
+                            75.703199,
+                            31.247993
+                        ],
+                        [
+                            75.703183,
+                            31.247943
+                        ],
+                        [
+                            75.703242,
+                            31.247888
+                        ],
+                        [
+                            75.703183,
+                            31.24786
+                        ],
+                        [
+                            75.703221,
+                            31.247801
+                        ],
+                        [
+                            75.703189,
+                            31.247745
+                        ],
+                        [
+                            75.703199,
+                            31.247667
+                        ],
+                        [
+                            75.703199,
+                            31.247567
+                        ],
+                        [
+                            75.703301,
+                            31.24759
+                        ],
+                        [
+                            75.703403,
+                            31.247594
+                        ],
+                        [
+                            75.703398,
+                            31.248048
+                        ],
+                        [
+                            75.703532,
+                            31.248057
+                        ],
+                        [
+                            75.703532,
+                            31.247599
+                        ],
+                        [
+                            75.703731,
+                            31.247599
+                        ],
+                        [
+                            75.703715,
+                            31.248067
+                        ],
+                        [
+                            75.703849,
+                            31.248071
+                        ],
+                        [
+                            75.70387,
+                            31.247603
+                        ],
+                        [
+                            75.704069,
+                            31.247603
+                        ],
+                        [
+                            75.704042,
+                            31.248181
+                        ],
+                        [
+                            75.703843,
+                            31.248181
+                        ],
+                        [
+                            75.703838,
+                            31.248126
+                        ],
+                        [
+                            75.703715,
+                            31.248117
+                        ],
+                        [
+                            75.703715,
+                            31.248278
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444681, 51.144415],
-            [23.444794, 51.144377],
-            [23.444952, 51.144561],
-            [23.444839, 51.1446],
-            [23.444681, 51.144415]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 21,
-        "category": "sport i rekreacja",
-        "info": {
-          "name": "KS Sport",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 3,
+                "category": "AUDITORIUM",
+                "info": {
+                    "name": "Main Administrative Building",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.7217,
+                            31.2165
+                        ],
+                        [
+                            75.7222,
+                            31.2165
+                        ],
+                        [
+                            75.7222,
+                            31.2170
+                        ],
+                        [
+                            75.7217,
+                            31.2170
+                        ],
+                        [
+                            75.7217,
+                            31.2165
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#28A747",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#28A747"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.4448, 51.144375],
-            [23.444894, 51.144343],
-            [23.445016, 51.144486],
-            [23.444922, 51.144518],
-            [23.4448, 51.144375]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 22,
-        "category": "usługi",
-        "info": {
-          "name": "Telemagic",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 4,
+                "category": "FOOD COURTS",
+                "info": {
+                    "name": "Main Administrative Building",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            75.7217,
+                            31.2165
+                        ],
+                        [
+                            75.7222,
+                            31.2165
+                        ],
+                        [
+                            75.7222,
+                            31.2170
+                        ],
+                        [
+                            75.7217,
+                            31.2170
+                        ],
+                        [
+                            75.7217,
+                            31.2165
+                        ]
+                    ]
+                ]
+            }
         },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
+        {
+            "type": "Feature",
+            "properties": {
+                "id": 5,
+                "category": "HOSPITAL",
+                "info": {
+                    "name": "Main Administrative Building",
+                    "description": "The central hub of administrative functions at Lovely Professional University.",
+                    "button": "show more"
+                },
+                "color": "#FF6347",
+                "style": {
+                    "fillOpacity": 0.5,
+                    "weight": 2,
+                    "fill": "#FF6347"
+                }
+            }
         }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444901, 51.144341],
-            [23.444961, 51.14432],
-            [23.44504, 51.144411],
-            [23.444979, 51.144432],
-            [23.444901, 51.144341]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 23,
-        "category": "usługi",
-        "info": {
-          "name": "ARS",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444967, 51.144318],
-            [23.445028, 51.144298],
-            [23.445106, 51.144389],
-            [23.445045, 51.144409],
-            [23.444967, 51.144318]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 24,
-        "category": "usługi",
-        "info": {
-          "name": "Plus",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445034, 51.144296],
-            [23.445079, 51.144281],
-            [23.445157, 51.144372],
-            [23.445112, 51.144387],
-            [23.445034, 51.144296]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 25,
-        "category": "usługi",
-        "info": {
-          "name": "Vision Express",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445084, 51.144279],
-            [23.445152, 51.144256],
-            [23.44523, 51.144347],
-            [23.445163, 51.14437],
-            [23.445084, 51.144279]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 26,
-        "category": "usługi",
-        "info": {
-          "name": "Play",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445159, 51.144254],
-            [23.445202, 51.144239],
-            [23.445247, 51.144291],
-            [23.445204, 51.144306],
-            [23.445159, 51.144254]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 27,
-        "category": "usługi",
-        "info": {
-          "name": "Orange",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445208, 51.144238],
-            [23.445239, 51.144227],
-            [23.445251, 51.144232],
-            [23.445262, 51.144237],
-            [23.445273, 51.144242],
-            [23.445281, 51.144247],
-            [23.445289, 51.144253],
-            [23.445296, 51.144258],
-            [23.445303, 51.144262],
-            [23.445312, 51.144269],
-            [23.445252, 51.14429],
-            [23.445208, 51.144238]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 28,
-        "category": "usługi",
-        "info": {
-          "name": "Pralnia",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445237, 51.144345],
-            [23.445208, 51.144311],
-            [23.445319, 51.144274],
-            [23.445332, 51.144283],
-            [23.445342, 51.14429],
-            [23.445351, 51.144298],
-            [23.445358, 51.144304],
-            [23.445237, 51.144345]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 29,
-        "category": "zdrowie i uroda",
-        "info": {
-          "name": "Rossmann",
-          "logo": "./logs/Rossmann.svg",
-          "description": "<b>Rossmann</b> jest liderem rynku drogeryjnego w Polsce. Codziennie zakupy w naszych drogeriach robi ponad 820 tys.",
-          "button": "show more"
-        },
-        "color": "#28BBED",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#28BBED"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445359, 51.144308],
-            [23.445437, 51.144398],
-            [23.444957, 51.14456],
-            [23.444924, 51.144522],
-            [23.445025, 51.144488],
-            [23.444981, 51.144436],
-            [23.445359, 51.144308]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 30,
-        "category": "art. spożywcze",
-        "info": {
-          "name": "Lidl",
-          "logo": "./logs/Lidl-Logo.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#FBBF18",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#FBBF18"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445568, 51.144353],
-            [23.44596, 51.144219],
-            [23.445509, 51.143673],
-            [23.445261, 51.143761],
-            [23.445223, 51.143722],
-            [23.445118, 51.143746],
-            [23.445103, 51.143722],
-            [23.445043, 51.143741],
-            [23.445568, 51.144353]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 31,
-        "category": "elektronika",
-        "info": {
-          "name": "RTV EURO AGD",
-          "logo": "./logs/rtv_euro_agd.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#194A9A",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#194A9A"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444839, 51.143809],
-            [23.445036, 51.143742],
-            [23.445354, 51.144112],
-            [23.445157, 51.144179],
-            [23.444839, 51.143809]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 32,
-        "category": "dla domu",
-        "info": {
-          "name": "PEPCO",
-          "logo": "./logs/pepco.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#F49713",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#F49713"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444831, 51.143811],
-            [23.445149, 51.144181],
-            [23.445009, 51.144228],
-            [23.444692, 51.143859],
-            [23.444831, 51.143811]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 33,
-        "category": "usługi",
-        "info": {
-          "name": "Kantor Promes",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.44536, 51.144185],
-            [23.445377, 51.144179],
-            [23.445346, 51.144145],
-            [23.445329, 51.144151],
-            [23.44536, 51.144185]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 34,
-        "category": "usługi",
-        "info": {
-          "name": "Neonail",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444917, 51.144302],
-            [23.444972, 51.144284],
-            [23.444963, 51.144274],
-            [23.444907, 51.144291]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 35,
-        "category": "usługi",
-        "info": {
-          "name": "STUFF Wybory Tytoniowe",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445146, 51.144225],
-            [23.445137, 51.144214],
-            [23.445081, 51.144233],
-            [23.445091, 51.144243],
-            [23.445146, 51.144225]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 36,
-        "category": "dla domu",
-        "info": {
-          "name": "DEALZ",
-          "logo": "./logs/Dealz.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#F49713",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#F49713"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445002, 51.144231],
-            [23.444684, 51.143861],
-            [23.444497, 51.143924],
-            [23.444815, 51.144294],
-            [23.445002, 51.144231]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 37,
-        "category": "dla domu",
-        "info": {
-          "name": "KIK",
-          "logo": "./logs/KiK-Logo.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#F49713",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#F49713"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444808, 51.144296],
-            [23.444491, 51.143927],
-            [23.44423, 51.144015],
-            [23.44431, 51.144108],
-            [23.444433, 51.144067],
-            [23.444671, 51.144343],
-            [23.444808, 51.144296]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 38,
-        "category": "dla domu",
-        "info": {
-          "name": "home&you",
-          "logo": "./logs/home&you.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#F49713",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#F49713"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444664, 51.144345],
-            [23.444431, 51.144073],
-            [23.444314, 51.144113],
-            [23.444547, 51.144385],
-            [23.444664, 51.144345]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 39,
-        "category": "sport i rekreacja",
-        "info": {
-          "name": "MARTES SPORT",
-          "logo": "./logs/martes-sport.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#28A747",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#28A747"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444469, 51.144411],
-            [23.444541, 51.144387],
-            [23.444223, 51.144017],
-            [23.443832, 51.144149],
-            [23.443905, 51.144234],
-            [23.444073, 51.144177],
-            [23.4443, 51.144441],
-            [23.444451, 51.14439],
-            [23.444469, 51.144411]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 40,
-        "category": "obuwie",
-        "info": {
-          "name": "DEICHMANN",
-          "logo": "./logs/Deichmann.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#D7569A",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#D7569A"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444295, 51.144443],
-            [23.444071, 51.144183],
-            [23.443908, 51.144238],
-            [23.444131, 51.144498],
-            [23.444295, 51.144443]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 41,
-        "category": "obuwie",
-        "info": {
-          "name": "CCC",
-          "logo": "./logs/ccc.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#D7569A",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#D7569A"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444143, 51.144521],
-            [23.443836, 51.144166],
-            [23.443592, 51.14425],
-            [23.443898, 51.144604],
-            [23.444143, 51.144521]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 42,
-        "category": "usługi",
-        "info": {
-          "name": "IOKS Okulary",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443838, 51.144667],
-            [23.443829, 51.144656],
-            [23.443884, 51.144638],
-            [23.443893, 51.144648],
-            [23.443838, 51.144667]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 43,
-        "category": "elektronika",
-        "info": {
-          "name": "SMYK",
-          "logo": "./logs/smyk.png",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#138874",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#138874"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443892, 51.144606],
-            [23.443748, 51.144654],
-            [23.443444, 51.1443],
-            [23.443587, 51.144253],
-            [23.443892, 51.144606]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 44,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "HOUSE",
-          "logo": "./logs/House.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443709, 51.144668],
-            [23.443528, 51.144458],
-            [23.443229, 51.144559],
-            [23.443212, 51.144602],
-            [23.44302, 51.144566],
-            [23.443002, 51.144606],
-            [23.443275, 51.144659],
-            [23.443269, 51.144677],
-            [23.443533, 51.144728],
-            [23.443709, 51.144668]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 45,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "CROPP",
-          "logo": "./logs/cropp.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.442997, 51.14461],
-            [23.443267, 51.144663],
-            [23.443259, 51.144682],
-            [23.443529, 51.144733],
-            [23.443464, 51.144867],
-            [23.442926, 51.144765],
-            [23.442997, 51.14461]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 46,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "Sinsay",
-          "www": "https://www.sinsay.com",
-          "logo": "./logs/sinsay.svg",
-          "description": "Sinsay to marka dla głośnych, charakternych i ekspresyjnych dziewczyn, które śmiało podążają za najnowszymi trendami.",
-          "button": "show more"
-        },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.442924, 51.144771],
-            [23.443461, 51.144872],
-            [23.443398, 51.145007],
-            [23.443197, 51.144969],
-            [23.443171, 51.145023],
-            [23.442837, 51.144961],
-            [23.442924, 51.144771]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 47,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "Reserved",
-          "logo": "./logs/RESERVED.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.442834, 51.144966],
-            [23.44317, 51.14503],
-            [23.443163, 51.145042],
-            [23.443363, 51.14508],
-            [23.443231, 51.145346],
-            [23.443079, 51.14536],
-            [23.443128, 51.14555],
-            [23.442822, 51.145578],
-            [23.442726, 51.145198],
-            [23.442834, 51.144966]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 48,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "New Yorker",
-          "logo": "./logs/New_Yorker.svg",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443136, 51.14555],
-            [23.443089, 51.145364],
-            [23.443237, 51.145351],
-            [23.443274, 51.145282],
-            [23.443797, 51.145381],
-            [23.443743, 51.145495],
-            [23.443136, 51.14555]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 51,
-        "category": "odzież i dodatki",
-        "info": {
-          "name": "Kubenz",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#89C9AF",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#89C9AF"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443173, 51.145039],
-            [23.443203, 51.144975],
-            [23.443396, 51.145011],
-            [23.443365, 51.145075],
-            [23.443173, 51.145039]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 52,
-        "category": "usługi",
-        "info": {
-          "name": "IQOS",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#927DB8",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#927DB8"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443418, 51.145072],
-            [23.443436, 51.145075],
-            [23.443454, 51.145038],
-            [23.443436, 51.145034],
-            [23.443418, 51.145072]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 54,
-        "category": "gastronomia",
-        "info": {
-          "name": "Restaurant",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#000",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#000"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.444423, 51.144681],
-            [23.444384, 51.14464],
-            [23.444483, 51.144605],
-            [23.44452, 51.144648],
-            [23.444423, 51.144681]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 55,
-        "category": "bankomaty",
-        "info": {
-          "name": "bankomat"
-        },
-        "color": "#000",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#000"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.445441, 51.144378],
-            [23.445418, 51.144351],
-            [23.445476, 51.144331],
-            [23.445496, 51.144358],
-            [23.445441, 51.144378]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 56,
-        "category": "toilets",
-        "info": {
-          "name": "Toilets",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!"
-        },
-        "color": "#28BBED",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#28BBED"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443287, 51.144389],
-            [23.443287, 51.144461],
-            [23.4434, 51.144461],
-            [23.4434, 51.144389],
-            [23.443287, 51.144389]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 57,
-        "category": "administracja",
-        "info": {
-          "name": "Administracja",
-          "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sit voluptatum eius eveniet repudiandae alias enim ex dolorum iure unde!",
-          "button": "show more"
-        },
-        "color": "#000",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#000"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443143, 51.144446],
-            [23.443143, 51.144511],
-            [23.443245, 51.144511],
-            [23.443245, 51.144446],
-            [23.443143, 51.144446]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 58,
-        "category": "bankomaty",
-        "info": {
-          "name": "bankomat"
-        },
-        "color": "#000",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#000"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443775, 51.145361],
-            [23.44372, 51.14535],
-            [23.443742, 51.145306],
-            [23.443793, 51.145315],
-            [23.443775, 51.145361]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": 59,
-        "category": "zdrowie i uroda",
-        "info": {
-          "name": "Hebe",
-          "www": "https://www.hebe.pl",
-          "logo": "./logs/hebe.svg",
-          "description": "Drogerie Hebe to sieć wyjątkowych sklepów, oferujących produkty dla zdrowia i piękna każdej kobiety.",
-          "button": "show more"
-        },
-        "color": "#28BBED",
-        "style": {
-          "fillOpacity": 0,
-          "weight": 0,
-          "fill": "#28BBED"
-        }
-      },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [23.443669, 51.145245],
-            [23.443784, 51.145267],
-            [23.443883, 51.145061],
-            [23.443724, 51.14503],
-            [23.443654, 51.145172],
-            [23.443699, 51.14518],
-            [23.443669, 51.145245]
-          ]
-        ]
-      }
-    }
-  ]
+    ]
 }
