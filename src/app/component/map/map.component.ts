@@ -7,6 +7,7 @@ import * as L from 'leaflet';
     templateUrl: './map.component.html',
     styleUrls: ['./map.component.scss'],
     standalone: true,
+    
 })
 export class MapComponent {
     private map!: L.Map;
