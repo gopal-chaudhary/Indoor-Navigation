@@ -151,7 +151,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Central Library"
+        "name": "Central Library",
+        "description": "Central Library, Lovely Professional University, Jalandhar, Punjab 144411"
       },
       "geometry": {
         "coordinates": [

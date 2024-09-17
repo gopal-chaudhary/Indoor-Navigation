@@ -208,12 +208,12 @@ export class MapService {
 
     private getStyles(feature: any): L.PathOptions {
         const defaultStyle: L.PathOptions = {
-            fillColor: '#FFFFFF',
+            fillColor: 'transparent',
             weight: 2,
             opacity: 1,
             color: 'black',
-            dashArray: '',
-            fillOpacity: 0.7,
+            dashArray: '...',
+            fillOpacity: 0,
         };
 
         if (feature.properties && feature.properties.style) {
