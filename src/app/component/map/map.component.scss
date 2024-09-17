@@ -69,7 +69,7 @@ img {
   color: #fff;
   text-transform: uppercase;
   font-size: 90%;
-  background: #610072;
+  background: #720000;
 }
 
 .info-button button:hover {
@@ -140,6 +140,7 @@ img {
 .shop-item .name,
 .info-name {
   text-transform: uppercase;
+
 }
 
 .shop-category {
@@ -149,7 +150,7 @@ img {
   margin-bottom: 5px;
   padding-left: 3px;
   font-size: 90%;
-  color: #ff4800;
+  color: #ff00bf;
 }
 
 .shop-color {
@@ -164,53 +165,24 @@ img {
 }
 
 
-// .map-container {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   // margin: 30px;
-// }
-
-// .map-frame {
-//   border: 2px solid black;
-//   height: 80vh;
-//   margin: auto;
-//   width: 80vw;
-// }
-
-// #map {
-//   height: 100%;
-//   width: 100%;
-// }
-
-
-/// follow mouse code
-.follow-mouse {
-  position: absolute;
-  margin: 0;
-  padding: 5px;
-  border: 1px solid #ccc;
-  z-index: 9999;
-  font-size: 1rem;
-}
 
 
 
 
-// #map {
-//     height: 90%;
-//     width: 90%;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     z-index: 0;
-// }
+
+
+
+
+
+
+
+
+
+
 
 #controls {
     position: absolute;
-    z-index: 1000;
+    z-index: 10000;
     top: 5rem;
     left: 5rem;
     background-color: white;

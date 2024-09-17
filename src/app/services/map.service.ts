@@ -6,13 +6,14 @@ import { TileLayer } from '../interfaces/tileLayer.interface';
 import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { MouseFollower } from '../utils/followMouse'; // Adjust the import path
-
+// 75.70360622954132,
+//             31.248759007827445
 @Injectable({
     providedIn: 'root',
 })
 export class MapService {
     private defaultMapSettings: MapSettings = {
-        location: [31.25271960741618, 100.70475680715587],
+        location: [75.70360622954132, 31.248759007827445],
         zoom: 19,
     };
 

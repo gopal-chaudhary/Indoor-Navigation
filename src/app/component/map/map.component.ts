@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { MapService } from '../../services/map.service';
 import * as L from 'leaflet';
 @Component({
@@ -6,8 +6,10 @@ import * as L from 'leaflet';
     templateUrl: './map.component.html',
     styleUrls: ['./map.component.scss'],
     standalone: true,
+    encapsulation:ViewEncapsulation.None
 
 })
+
 export class MapComponent {
     private map!: L.Map;
     private geojson!: L.GeoJSON;
@@ -62,7 +64,7 @@ export class MapComponent {
     }
     async addingListItem(){
         try {
-            const response = await fetch("assets/data/data.geojson");
+            const response = await fetch("assets/data/lpu.geojson");
             const data = await response.json();
 
             // Function to dynamically get style from feature properties
