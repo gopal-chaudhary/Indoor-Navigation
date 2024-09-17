@@ -64,7 +64,7 @@ export class MapComponent {
     }
     async addingListItem(){
         try {
-            const response = await fetch("assets/data/lpu.geojson");
+            const response = await fetch("assets/data/data1.geojson");
             const data = await response.json();
 
             // Function to dynamically get style from feature properties
