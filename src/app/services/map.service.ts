@@ -217,7 +217,6 @@ export class MapService {
 
 
     private getStyles(feature: any): L.PathOptions {
-        console.log("fp", feature.properties);
         const defaultStyle: L.PathOptions = {
             fillColor: '#FFFFFF',
             weight: 2,
