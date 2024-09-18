@@ -41,7 +41,7 @@ export class MapComponent implements AfterViewInit {
                     this.initSearchFunctionality();
 
                     mapEl.addEventListener('click', (event) => {
-                        // this.renderMarker(event);
+                        this.renderMarker(event);
                     });
                 } catch (scriptError) {
                     console.error(
@@ -122,7 +122,7 @@ export class MapComponent implements AfterViewInit {
 
     private zoomToFeature(e: L.LeafletEvent): void {
         let layer: any = e.target;
-        if(e.propagatedFrom.feature) {
+        if(e.propagatedFrom && e.propagatedFrom.feature) {
             layer = e.propagatedFrom;
         }
         const bounds: any = layer.getBounds();
