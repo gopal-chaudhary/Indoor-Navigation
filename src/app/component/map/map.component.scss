@@ -89,6 +89,7 @@ img {
     top: 1rem;
     left: 50%;
     right: 50%;
+
     transform: translateX(-50%);
     z-index: 1000;
     height: fit-content;
@@ -120,8 +121,11 @@ img {
     margin: 0;
     padding: 0 10px 0 0;
     list-style: none;
+    max-height: 20rem;
+    overflow: auto;
     height: calc(100% - 60px);
-    background-color: #f1f1f1;
+    background-color: #ffffff;
+    display: none;
 
     overflow: auto;
 }
@@ -146,7 +150,7 @@ img {
 }
 
 .shop-item:hover {
-    background: #f3f3f3;
+    background: #b7f6f8;
 }
 
 .shop-item .name,

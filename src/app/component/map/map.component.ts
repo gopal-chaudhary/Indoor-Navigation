@@ -34,7 +34,7 @@ export class MapComponent implements AfterViewInit {
                     const { features, geojson, data } = await this.mapService.addingListItem();
                     this.onEachFeature(features, geojson);
                     this.populateShopsList(data);
-                    this.searchText();
+                    ((document.querySelector('.shops-list') as HTMLElement)).style.display = 'none';
                     this.initShopItemClick(geojson);
                     this.initSearchFunctionality();  // Ensure this is called
                     document.getElementById('map')?.addEventListener('click', (e) => {
@@ -120,6 +120,7 @@ export class MapComponent implements AfterViewInit {
         const searchElement = document.getElementById('search-shop');
         if (searchElement) {
             (searchElement as HTMLInputElement).value = '';
+
         }
 
         this.removeActiveItem();
@@ -143,6 +144,7 @@ export class MapComponent implements AfterViewInit {
       </div>`;
 
         layer.bindPopup(template).openPopup();
+
     }
 
 
@@ -164,28 +166,31 @@ export class MapComponent implements AfterViewInit {
     private initSearchFunctionality(): void {
         const searchElement = document.getElementById('search-shop') as HTMLInputElement;
         if (searchElement) {
+
             searchElement.addEventListener('input', this.searchText.bind(this));
-        }
+
+
     }
+}
 
     private searchText(): void {
+
         const input = document.getElementById('search-shop') as HTMLInputElement;
         const filter = input.value.toUpperCase();
         const lists = document.querySelectorAll('.shops-list > li.shop-item');  // Only target shop items
-        if (filter.length < 1) {
-            lists.forEach((list: HTMLElement | any) => {
-                list.style.display = 'none';
-            });
+        if (filter.length < 2) {
+            ((document.querySelector('.shops-list') as HTMLElement)).style.display = 'none';
+            return ;
+        }
+        ((document.querySelector('.shops-list')  as HTMLElement)).style.display = 'block';
 
 
-        } else {
 
             lists.forEach((list: HTMLElement | any) => {
                 const item = list.textContent || '';
                 list.style.display = item.toUpperCase().includes(filter) ? '' : 'none';
 
             });
-        }
 
         const categories = document.querySelectorAll('.shop-category');
         if (filter.length >= 1) {
@@ -201,6 +206,7 @@ export class MapComponent implements AfterViewInit {
 
 
     private async populateShopsList(data: any): Promise<void> {
+
         const shopsList = document.querySelector('.shops-list')!;
         const sortedFeatures = data.features.sort((a: any, b: any) =>
             a.properties.category.localeCompare(b.properties.category) ||
@@ -208,11 +214,6 @@ export class MapComponent implements AfterViewInit {
         );
 
         sortedFeatures.forEach((item: any, index: number, array: any[]) => {
-            const category = item.properties.category !== array[index - 1]?.properties.category
-                ? `<li ><h3 class="shop-category">${item.properties.category}</h3></li>`
-                : '';
-
-                // ${category}
             const template = `
         <li class="shop-item" data-shop-id="${item.properties.id}">
           <div class="name">${item.properties.info.name}</div>
@@ -227,6 +228,7 @@ export class MapComponent implements AfterViewInit {
     private initShopItemClick(geojson: L.GeoJSON): void {
         document.querySelectorAll('.shop-item').forEach((item: any) => {
             item.addEventListener('click', (e: Event) => {
+                ((document.querySelector('.shops-list')  as HTMLElement)).style.display = 'none';
                 const id = (e.target as any).closest('.shop-item')!.dataset.shopId;
                 geojson.eachLayer((layer: any) => {
                     if (layer.feature.properties.id == id) {
@@ -235,5 +237,8 @@ export class MapComponent implements AfterViewInit {
                 });
             });
         });
+
+
+
     }
 }
