@@ -1,0 +1,32 @@
+<div id="scene" *ngIf="scriptsLoaded; else loading">
+    <a-scene
+        vr-mode-ui="enabled: false"
+        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+        *ngIf="lat > 0 && lng > 0"
+    >
+        <!-- <a-box
+            material="color: yellow;"
+            scale="10 10 10"
+            [attr.gps-entity-place]="
+                'latitude: 31.2528312; longitude: 75.7039808;'
+            "
+        ></a-box> -->
+        <a-camera
+            rotation-reader
+            [attr.gps-camera]="
+                'simulateLatitude: ' +
+                lat +
+                '; simulateLongitude: ' +
+                lng +
+                '; minDistance: 5; maxDistance: 2500;' +
+                'gpsMinDistance: 10; accelerationToMove: 1;'
+            "
+            gps-options="enableHighAccuracy: true, timeout: 10000, maximumAge: 0"
+        >
+        </a-camera>
+    </a-scene>
+</div>
+
+<ng-template #loading>
+    <p>Loading AR Experience...</p>
+</ng-template>

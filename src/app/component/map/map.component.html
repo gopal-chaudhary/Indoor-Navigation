@@ -1,0 +1,36 @@
+
+<div class="shop">
+    <div id="map"></div>
+    <div class="autocomplete">
+      <input
+        id="search-shop"
+        class="search-shop"
+        type="text"
+        placeholder="Search for a shop"
+        />
+        <ul class="shops-list">
+
+  <li class="shop-item" data-shop-id="shop-id">
+    <div class="name">Shop Name</div>
+    <div class="shop-color" style="background: color"></div>
+  </li>
+        </ul>
+    </div>
+  </div>
+
+  <div id="controls">
+      <button
+          type="button"
+          class="control-button active"
+          (click)="render2D($event)"
+      >
+          2D
+      </button>
+      <button type="button" class="control-button" (click)="render3D($event)">
+          3D
+      </button>
+      <button type="button" class="control-button" (click)="redirectTo('ar')">
+          AR
+      </button>
+  </div>
+
