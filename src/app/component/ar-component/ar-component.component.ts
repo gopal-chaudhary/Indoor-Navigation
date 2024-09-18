@@ -3,8 +3,6 @@ import { GeoLocationService } from '../../services/geo-location.service';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NgIf } from '@angular/common';
 
-import * as data from '../../../../public/nata.json';
-
 declare const AFRAME: any;
 
 @Component({
@@ -40,15 +38,15 @@ export class ArComponentComponent {
         this.spinLock();
     }
 
-    spinLock() {
+    async spinLock() {
         if(!document.querySelector('a-scene')) {
-            setTimeout(() => {
-                this.spinLock();
+            setTimeout(async () => {
+                await this.spinLock();
             }, 1000);
         }
         else {
             console.log(document.querySelector('a-scene'));
-            this.loadData();
+            await this.loadData();
         }
     }
 
@@ -119,14 +117,11 @@ export class ArComponentComponent {
         });
     }
 
-    loadData() {
-        const testEntity = document.createElement('a-box');
-        testEntity.setAttribute('position', '0 2 -25');
-        testEntity.setAttribute('color', 'blue');
-        testEntity.setAttribute('scale', '10 10 10');
-        document.querySelector('a-scene')?.appendChild(testEntity);
-        data.features.forEach((feature) => {
-            if(feature.geometry.type == "Point") {
+    async loadData() {
+        let res = await fetch("../../../../assets/data/data1.geojson");
+        let data = await res.json();
+        data.features.forEach((feature: any) => {
+            if(feature.geometry && feature.geometry.type == "Point") {
                 const entity = document.createElement('a-box');
                 entity.setAttribute('gps-entity-place', `
                     latitude: ${feature.geometry.coordinates[1]};
@@ -136,6 +131,26 @@ export class ArComponentComponent {
                 // entity.setAttribute("name", feature.properties.name as string);
                 entity.setAttribute('scale', '1500 1500 1500');
                 console.log(entity);
+                document.querySelector('a-scene')?.appendChild(entity);
+            } else if(feature.geometry && feature.geometry.type == "Polygon") {
+                const entity = document.createElement('a-entity');
+                const box = document.createElement('a-box');
+                const text = document.createElement('a-text');
+                entity.setAttribute('gps-entity-place', `
+                    latitude: ${feature.geometry.coordinates[0][0][1]};
+                    longitude: ${feature.geometry.coordinates[0][0][0]};
+                `);
+                box.setAttribute('scale', '10 10 10');
+                box.setAttribute('color', 'green');
+                box.setAttribute('opacity', '0.5');
+                box.setAttribute("position", "0 -20 0");
+                text.setAttribute('value', feature.properties.info.name as string);
+                text.setAttribute('color', 'black');
+                text.setAttribute('align', 'center');
+                text.setAttribute('position', '0 0 0');
+                text.setAttribute('scale', '30 30 30');
+                entity.appendChild(box);
+                entity.appendChild(text);
                 document.querySelector('a-scene')?.appendChild(entity);
             }
         });
