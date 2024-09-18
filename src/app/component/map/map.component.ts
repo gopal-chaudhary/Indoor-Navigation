@@ -7,20 +7,9 @@ import * as L from 'leaflet';
     templateUrl: './map.component.html',
     styleUrls: ['./map.component.scss'],
     standalone: true,
-    encapsulation: ViewEncapsulation.None
-    selector: 'app-map',
-    templateUrl: './map.component.html',
-    styleUrls: ['./map.component.scss'],
-    standalone: true,
     encapsulation: ViewEncapsulation.None,
 })
 export class MapComponent implements AfterViewInit {
-    private map!: L.Map;
-    private osmbSettings = {
-        zoom: 19,
-        effects: ['shadows', 'bloom'],
-    };
-    private osmb?: any;
     private map!: L.Map;
     private osmbSettings = {
         zoom: 19,
@@ -32,12 +21,6 @@ export class MapComponent implements AfterViewInit {
 
     async ngAfterViewInit(): Promise<void> {
         console.log('MapComponent.ngAfterViewInit()');
-
-        try {
-            const mapEl = document.getElementById('map') as HTMLElement;
-            if (!mapEl) {
-                throw new Error('Map element not found');
-            }
         try {
             const mapEl = document.getElementById('map') as HTMLElement;
             if (!mapEl) {
@@ -84,16 +67,6 @@ export class MapComponent implements AfterViewInit {
             document.body.appendChild(script);
         });
     }
-    private loadScript(src: string): Promise<void> {
-        return new Promise((resolve, reject) => {
-            const script = document.createElement('script');
-            script.src = src;
-            script.async = true;
-            script.onload = () => resolve();
-            script.onerror = () => reject(`Failed to load script: ${src}`);
-            document.body.appendChild(script);
-        });
-    }
 
     render3D(event: MouseEvent): void {
         if (!this.osmb) {
@@ -114,13 +87,6 @@ export class MapComponent implements AfterViewInit {
         }
         this.toggleUI(event.target as HTMLButtonElement);
     }
-    render2D(event: MouseEvent): void {
-        if (this.osmb) {
-            this.osmb.remove();
-            this.osmb = undefined;
-        }
-        this.toggleUI(event.target as HTMLButtonElement);
-    }
 
     private toggleUI(button: HTMLButtonElement): void {
         document
@@ -129,9 +95,6 @@ export class MapComponent implements AfterViewInit {
         button.classList.add('active');
     }
 
-    redirectTo(src: string): void {
-        window.location.assign(src);
-    }
     redirectTo(src: string): void {
         window.location.assign(src);
     }
@@ -144,14 +107,6 @@ export class MapComponent implements AfterViewInit {
         });
     }
 
-    private highlightFeature(e: L.LeafletEvent): void {
-        const layer: any = e.target as L.Layer;
-        layer.setStyle({
-            weight: 2,
-            color: 'black',
-            dashArray: '6',
-        });
-    }
     private highlightFeature(e: L.LeafletEvent): void {
         const layer: any = e.target as L.Layer;
         layer.setStyle({
@@ -191,7 +146,6 @@ export class MapComponent implements AfterViewInit {
             : '';
 
         const template = `
-        const template = `
       <div class="info-shop">
         ${logoImg}
         <div>
@@ -210,16 +164,6 @@ export class MapComponent implements AfterViewInit {
             .forEach((item) => item.removeAttribute('style'));
     }
 
-    private setActiveMenuItem(id: string): void {
-        document.querySelectorAll('.shops-list > li').forEach((item: any) => {
-            item.classList.remove('active-shop');
-            if (item.dataset.shopId === id) {
-                item.classList.add('active-shop');
-                const ulElement: any = document.querySelector('.shops-list')!;
-                ulElement.scrollTo(0, item.offsetTop - ulElement.offsetTop);
-            }
-        });
-    }
     private setActiveMenuItem(id: string): void {
         document.querySelectorAll('.shops-list > li').forEach((item: any) => {
             item.classList.remove('active-shop');
@@ -264,7 +208,6 @@ export class MapComponent implements AfterViewInit {
 
     private async populateShopsList(data: any): Promise<void> {
         const shopsList = document.querySelector('.shops-list')!;
-        console.log(data);
         const sortedFeatures = data.features.sort(
             (a: any, b: any) =>
                 a.properties.category.localeCompare(b.properties.category) ||
@@ -286,9 +229,6 @@ export class MapComponent implements AfterViewInit {
         </li>
       `;
 
-            shopsList.insertAdjacentHTML('beforeend', template);
-        });
-    }
             shopsList.insertAdjacentHTML('beforeend', template);
         });
     }
