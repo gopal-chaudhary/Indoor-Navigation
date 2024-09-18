@@ -191,6 +191,9 @@ export class MapComponent implements AfterViewInit {
         const filter = input.value.toUpperCase();
         const lists = document.querySelectorAll('.shops-list > li');
         const categories = document.querySelectorAll('.shop-category');
+        // manage shop list
+        (document.querySelector('.shops-list') as HTMLElement).style.display = (filter.length > 0) ? 'block' : 'none';
+
 
         lists.forEach((list: any) => {
             const item = list.textContent || '';
@@ -243,6 +246,8 @@ export class MapComponent implements AfterViewInit {
                         this.zoomToFeature({ target: layer } as any);
                     }
                 });
+        (document.querySelector('.shops-list') as HTMLElement).style.display = 'none';
+
             });
         });
     }
