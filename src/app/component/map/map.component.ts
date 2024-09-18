@@ -39,6 +39,10 @@ export class MapComponent implements AfterViewInit {
                     this.populateShopsList(data);
                     this.initShopItemClick(geojson);
                     this.initSearchFunctionality();
+
+                    mapEl.addEventListener('click', (event) => {
+                        this.renderMarker(event);
+                    });
                 } catch (scriptError) {
                     console.error(
                         'Error loading OSMBuildings script:',
@@ -103,7 +107,7 @@ export class MapComponent implements AfterViewInit {
         layer.on({
             mouseover: this.highlightFeature.bind(this),
             mouseout: (e: L.LeafletEvent) => layer.resetStyle(e.target),
-            click: this.zoomToFeature.bind(this),
+            click: (e: L.LeafletEvent) => this.zoomToFeature(e.target),
         });
     }
 
@@ -118,7 +122,9 @@ export class MapComponent implements AfterViewInit {
 
     private zoomToFeature(e: L.LeafletEvent): void {
         const layer: any = e.target as L.Layer;
+        if(!layer || !layer.getBounds) return;
         const bounds: any = layer.getBounds();
+        console.log('zoomToFeature', layer.feature.properties.id);
         this.map.flyToBounds(bounds, { padding: [50, 50] });
 
         const searchElement = document.getElementById('search-shop');
