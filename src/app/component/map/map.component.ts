@@ -41,7 +41,7 @@ export class MapComponent implements AfterViewInit {
                     this.initSearchFunctionality();
 
                     mapEl.addEventListener('click', (event) => {
-                        this.renderMarker(event);
+                        // this.renderMarker(event);
                     });
                 } catch (scriptError) {
                     console.error(
@@ -107,7 +107,7 @@ export class MapComponent implements AfterViewInit {
         layer.on({
             mouseover: this.highlightFeature.bind(this),
             mouseout: (e: L.LeafletEvent) => layer.resetStyle(e.target),
-            click: (e: L.LeafletEvent) => this.zoomToFeature(e.target),
+            click: (e: L.LeafletEvent) => this.zoomToFeature(e as any),
         });
     }
 
@@ -121,8 +121,10 @@ export class MapComponent implements AfterViewInit {
     }
 
     private zoomToFeature(e: L.LeafletEvent): void {
-        const layer: any = e.target as L.Layer;
-        if(!layer || !layer.getBounds) return;
+        let layer: any = e.target;
+        if(e.propagatedFrom.feature) {
+            layer = e.propagatedFrom;
+        }
         const bounds: any = layer.getBounds();
         console.log('zoomToFeature', layer.feature.properties.id);
         this.map.flyToBounds(bounds, { padding: [50, 50] });
