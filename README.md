@@ -1,110 +1,72 @@
-## Table of Contents
-
-- [Overview](#overview)
-- [Installation](#installation)
-- [MouseFollower](#mousefollower)
-- [MarkLocations](#marklocations)
+# Railway Station Navigation System
 
 ## Overview
-  ### Streamlining multi-platform, multilevel, and multi-building navigation to essential facilities within railway station premises accommodating diverse passenger needs.
-  
 
-## Installation
+Navigating through complex railway stations can be a daunting task for passengers. Our **Railway Station Navigation System** is designed to transform the passenger experience by providing an intuitive, real-time navigation solution that enhances accessibility, reduces confusion, and streamlines the travel process.
 
-1. **Ensure you have Leaflet installed:**
+## Problem Statement
 
-   If you haven't already, install Leaflet using npm:
+Railway stations are intricate environments filled with various facilities such as ticket counters, platforms, restrooms, food courts, and waiting areas. Passengers often struggle to find their way, especially in larger or unfamiliar stations. Our solution addresses these challenges by offering:
 
-   ```bash
-   npm install 
-   ```
+- Detailed maps and real-time directions.
+- Accessibility options for individuals with disabilities.
+- Integration with existing railway services for a seamless user experience.
 
+## Key Features
 
+- **Interactive 3D Maps**: Utilizing Leaflet and OpenStreetMap, users can explore the station with detailed, immersive 3D maps.
+- **Real-time Updates**: Get immediate notifications about platform changes, train delays, and other crucial information.
+- **Voice-Guided Navigation**: Designed for visually impaired passengers, our system offers audio instructions and voice commands.
+- **Accessibility Options**: Wheelchair-friendly routes, braille options on kiosks, and support for multiple languages ensure inclusivity for all users.
+- **Dynamic Routing**: Our custom routing engine tracks user movements and suggests alternate routes to minimize congestion.
+- **Open Source and Secure**: With a focus on privacy and data security, our platform is open source and compliant with data protection regulations.
 
+## Technical Architecture
 
-### MouseFollower
+### Frontend
 
-#### Purpose
-The `MouseFollower` function creates a floating `div` element that displays the latitude and longitude coordinates of the mouse cursor's position as it moves over a Leaflet map.
+- **Framework**: Built using **Ionic** with **Angular** for a seamless user experience across mobile, web, and desktop platforms.
 
-#### How It Works
-- **Displays Coordinates:** As the mouse moves over the map, the function updates the `div` with the current latitude and longitude based on the cursor's position.
-- **Follows Mouse:** The `div` follows the cursor and adjusts its position to stay within the map container.
+### Backend
 
-#### Usage
+- **Language**: Powered by **Go**, optimized for high performance and concurrency, ensuring efficient handling of requests.
 
-1. **Import the Function:**
+### Database
 
-   ```typescript
-   import { MouseFollower } from './utils/MouseFollower'; // Adjust the path to where MouseFollower.ts is located
-   ```
+- **Database Management**: Utilizes **SQLite**, lightweight and easily hostable, ideal for real-time updates.
 
-2. **Initialize Your Map and Call `MouseFollower`:**
+### Routing Engine
 
-   ```typescript
-   import * as L from 'leaflet';
-   import { MouseFollower } from './utils/MouseFollower'; // Adjust the path as needed
+- Custom-built to support multi-building and multi-level routing with accessibility features.
 
-   // Initialize Leaflet map
-   const map = L.map('map', {
-     center: [51.505, -0.09],
-     zoom: 13,
-   });
+### AR Integration
 
-   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-     maxZoom: 18,
-     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-   }).addTo(map);
+- **Technologies**: Incorporates **AR.js** and **A-Frame** for an enhanced user experience through augmented reality.
 
-   // Apply MouseFollower to the map
-   MouseFollower(map);
-   ```
+### Accessibility Features
 
-#### Result
-- **Floating Div:** A `div` will appear on the screen that follows the mouse cursor.
-- **Coordinates Display:** The `div` will show the latitude and longitude of the cursor's position on the map.
+- Supports voice commands, multiple languages, and themes for users with diverse needs.
 
+## Videos
 
+Here are some videos showcasing our system in action:
 
+- [Introduction to the Railway Station Navigation System](link_to_video1)
+- [Real-Time Navigation Demo](link_to_video2)
+- [Accessibility Features Overview](link_to_video3)
 
-### MarkLocations
+## Outcome
 
-#### Purpose
-The `MarkLocations` function adds markers to a Leaflet map based on given coordinates and updates a sidebar with the markers that are visible within the current map view.
+Our solution ensures that every passenger—whether unfamiliar with railway stations, teenagers, international travelers, or individuals with disabilities—can navigate and enjoy a stress-free experience. By leveraging advanced technology, we aim to make travel more convenient, accessible, and secure for all.
 
-#### How It Works
-1. **Add Markers**: Creates and places markers on the map for each coordinate provided.
-2. **Update Sidebar**: Displays information about the markers that fall within the current map bounds in a sidebar.
-3. **Handle Map Movements**: Updates the sidebar whenever the map is moved or zoomed.
+## Getting Started
 
-#### Usage
+To explore the system and see it in action, follow the instructions in the [Installation Guide](link_to_installation_guide).
 
-1. **Import the Function**:
-   ```typescript
-   import { MarkLocations } from './path/to/MarkLocations'; // Adjust the path as needed
-   ```
+## Contributing
 
-2. **Call the Function**:
-   ```typescript
-   // Initialize the Leaflet map
-   const map = L.map('mapId'); // Replace 'mapId' with your map container ID
+We welcome contributions! If you're interested in helping improve the Railway Station Navigation System, please check out our [Contributing Guidelines](link_to_contributing_guidelines).
 
-   // Define your coordinates
-   const points = [
-     { lat: 51.505, lng: -0.09 },
-     // Add more coordinates as needed
-   ];
+## License
 
-   // Add markers and setup sidebar
-   MarkLocations(map, points);
-   ```
-
-#### Features
-- **Markers**: Adds markers to the map for each coordinate.
-- **Sidebar**: Updates an element with the ID `sidebar` to list markers that are visible on the current map view.
-- **Event Handling**: Reacts to map movements by refreshing the sidebar content to reflect the visible markers.
-
-#### Notes
-- Ensure you have an HTML element with the ID `sidebar` for displaying marker information.
-- The function assumes you have initialized a Leaflet map instance before calling it.
-
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
