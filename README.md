@@ -12,6 +12,18 @@ Railway stations are intricate environments filled with various facilities such 
 - Accessibility options for individuals with disabilities.
 - Integration with existing railway services for a seamless user experience.
 
+## Videos
+
+Here are some videos showcasing our system in action:
+
+<video width="600" height="400" controls autoplay>
+  <source src="https://github.com/gopal-chaudhary/Indoor-Navigation/blob/main/public/WhatsApp%20Video%202024-09-18%20at%2010.28.54%20AM.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+- [Real-Time Navigation Demo](link_to_video2)
+- [Accessibility Features Overview](link_to_video3)
+
 ## Key Features
 
 - **Interactive 3D Maps**: Utilizing Leaflet and OpenStreetMap, users can explore the station with detailed, immersive 3D maps.
