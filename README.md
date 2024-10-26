@@ -21,8 +21,8 @@ Here are some videos showcasing our system in action:
   Your browser does not support the video tag.
 </video>
 
-- [Real-Time Navigation Demo](link_to_video2)
-- [Accessibility Features Overview](link_to_video3)
+- [Real-Time Navigation Demo](https://github.com/gopal-chaudhary/Indoor-Navigation/blob/main/public/WhatsApp%20Video%202024-09-18%20at%2010.28.54%20AM.mp4)
+- [Accessibility Features Overview](https://github.com/gopal-chaudhary/Indoor-Navigation/blob/main/public/WhatsApp%20Video%202024-09-18%20at%2010.28.54%20AM.mp4)
 
 ## Key Features
 
@@ -58,16 +58,6 @@ Here are some videos showcasing our system in action:
 ### Accessibility Features
 
 - Supports voice commands, multiple languages, and themes for users with diverse needs.
-
-## Videos
-
-Here are some videos showcasing our system in action:
-
-- [Introduction to the Railway Station Navigation System]([link_to_video1](https://github.com/gopal-chaudhary/Indoor-Navigation/blob/main/public/WhatsApp%20Video%202024-09-18%20at%2010.28.54%20AM.mp4))
-- [Real-Time Navigation Demo](link_to_video2)
-- [Accessibility Features Overview](link_to_video3)
-
-## Outcome
 
 Our solution ensures that every passenger—whether unfamiliar with railway stations, teenagers, international travelers, or individuals with disabilities—can navigate and enjoy a stress-free experience. By leveraging advanced technology, we aim to make travel more convenient, accessible, and secure for all.
 
