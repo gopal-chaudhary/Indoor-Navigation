@@ -51,7 +51,7 @@ Railway stations are intricate environments filled with various facilities such 
 
 Here are some videos showcasing our system in action:
 
-- [Introduction to the Railway Station Navigation System](link_to_video1)
+- [Introduction to the Railway Station Navigation System]([link_to_video1](https://github.com/gopal-chaudhary/Indoor-Navigation/blob/main/public/WhatsApp%20Video%202024-09-18%20at%2010.28.54%20AM.mp4))
 - [Real-Time Navigation Demo](link_to_video2)
 - [Accessibility Features Overview](link_to_video3)
 
